@@ -1,12 +1,12 @@
 [
  {
-  "slug": "bonita-pool-house",
-  "name": "Bonita Pool House",
-  "short": "Bonita Pool House",
+  "slug": "bonita-casita",
+  "name": "Bonita Casita",
+  "short": "Bonita Casita",
   "type": "Pool house",
   "cat": "res",
   "location": "",
-  "year": "",
+  "year": "2026",
   "gallery": [
    {
     "cap": "Completed pool house and pool",
@@ -25,7 +25,7 @@
   "type": "Interior renovation",
   "cat": "res",
   "location": "Midway Hollow, Dallas",
-  "year": "",
+  "year": "2026",
   "gallery": [
    {
     "cap": "Living and dining",
@@ -71,8 +71,8 @@
   "short": "Knockouts",
   "type": "Commercial interior",
   "cat": "com",
-  "location": "",
-  "year": "",
+  "location": "Various",
+  "year": "2025",
   "gallery": [
    {
     "cap": "Reception, rendering",
@@ -135,7 +135,7 @@
   "type": "Patio cover",
   "cat": "res",
   "location": "McKinney",
-  "year": "",
+  "year": "2026",
   "gallery": [
    {
     "cap": "Patio cover, rendering",
@@ -158,8 +158,8 @@
   "short": "Purdue Avenue",
   "type": "Interior renovation",
   "cat": "res",
-  "location": "",
-  "year": "",
+  "location": "Dallas",
+  "year": "2026",
   "gallery": [
    {
     "cap": "Kitchen, toward the living room",
@@ -209,8 +209,8 @@
   "short": "Mia’s",
   "type": "Commercial interior",
   "cat": "com",
-  "location": "",
-  "year": "",
+  "location": "Coppell",
+  "year": "2025",
   "gallery": [
    {
     "cap": "Salon floor, as built",
@@ -222,25 +222,6 @@
    },
    {
     "cap": "3D plan view",
-    "kind": "drawing"
-   }
-  ]
- },
- {
-  "slug": "rockwall-adu",
-  "name": "Rockwall ADU",
-  "short": "Rockwall ADU",
-  "type": "Accessory dwelling unit",
-  "cat": "res",
-  "location": "Rockwall",
-  "year": "",
-  "gallery": [
-   {
-    "cap": "Rendering",
-    "kind": "photo"
-   },
-   {
-    "cap": "Existing floor plan",
     "kind": "drawing"
    }
   ]
@@ -300,29 +281,6 @@
    {
     "cap": "Framing, with a printed model of the house",
     "kind": "photo"
-   }
-  ]
- },
- {
-  "slug": "goliad-avenue",
-  "name": "Goliad Avenue",
-  "short": "Goliad Avenue",
-  "type": "Second floor",
-  "cat": "res",
-  "location": "",
-  "year": "",
-  "gallery": [
-   {
-    "cap": "Bedroom, rendering",
-    "kind": "photo"
-   },
-   {
-    "cap": "Second-floor plan",
-    "kind": "drawing"
-   },
-   {
-    "cap": "Plan perspective",
-    "kind": "drawing"
    }
   ]
  },

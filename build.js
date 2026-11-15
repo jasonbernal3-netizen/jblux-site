@@ -128,7 +128,7 @@ function card(u, p, sizes, extra = '') {
 /* ── pages ── */
 function home(u) {
   const f = site.featured.map(s => bySlug[s]);
-  const homeImg = { 'courtshire': ['h-courtshire', ''], 'bonita-pool-house': ['hero-built-tall', ' s'], 'mckinney-patio-cover': ['h-mckinney', ' s'], 'purdue-avenue': ['h-purdue', ''], 'knockouts-hair-salon': ['h-knockouts', ''], 'mias-hair-salon': ['h-mias', ' s'] };
+  const homeImg = { 'courtshire': ['h-courtshire', ''], 'bonita-casita': ['hero-built-tall', ' s'], 'mill-creek': ['h-mill-creek', ' s'], 'purdue-avenue': ['h-purdue', ''], 'knockouts-hair-salon': ['h-knockouts', ''], 'mias-hair-salon': ['h-mias', ' s'] };
   const hc = (p, i) => {
     const [img, cls] = homeImg[p.slug] || ['c-' + p.slug, ''];
     return `<a class="card${cls} reveal" href="${u(`/projects/${p.slug}/`)}">
@@ -143,7 +143,7 @@ function home(u) {
     const go = ex.length ? `<a class="svc-go" href="${u(`/projects/${ex[0].slug}/`)}">${ex.slice(0, 2).map(p => esc(p.short)).join(', ')} →</a>` : `<a class="svc-go" href="${u('/projects/')}">View projects →</a>`;
     return `<li class="svc-row"><span class="svc-thumbs">${thumbs}</span><span class="svc-name">${esc(s.name)}<sup class="num">0${i + 1}</sup></span>${go}</li>`;
   }).join('\n      ');
-  const fp = bySlug['bonita-pool-house'];
+  const fp = bySlug['bonita-casita'];
   return `
 <div class="loader" id="loader" aria-hidden="true">
   ${LOGO('class="ld-logo"')}
@@ -179,7 +179,9 @@ ${chrome(u, '/')}
   <section class="studio pad" id="studio">
     <div class="studio-grid">
       <h2 class="mega ruled rise"><span class="mask"><span>Residential +</span></span><span class="mask"><span>light commercial</span></span></h2>
-      <figure class="studio-fig frame reveal">${pic(u, 'mill-creek-axon', '(max-width:900px) 66vw, 33vw', 'Exploded axonometric drawing of a second-story addition lifted above an existing house, Mill Creek')}</figure>
+      <div class="axons">
+        ${[['Existing house', 'the existing single-story house with the roof area to be removed outlined'], ['Roof removed', 'the roof lifted away to open the plan below'], ['Second story added', 'the new second story lowered onto the existing walls'], ['Complete', 'the finished two-story house']].map(([t, alt], i) => `<figure class="axon reveal"><div class="frame">${pic(u, 'ax-' + (i + 1), '(max-width:720px) 50vw, 25vw', 'Mill Creek axonometric, step ' + (i + 1) + ': ' + alt)}</div><figcaption class="label"><span class="num">0${i + 1}</span><span>${t}</span></figcaption></figure>`).join('\n        ')}
+      </div>
       <span class="studio-tag label">Our studio</span>
       <div class="studio-copy">
         <p>Jason Bernal founded JB Lux Designs in ${site.founded}, after <span class="ph">[11]</span> years in architecture across healthcare, commercial and residential projects, including design coordination on multi-phase healthcare work.</p>
@@ -472,7 +474,7 @@ const routes = [];
 routes.push(page({ route: '/', depth: 0, home: true, title: `${site.name} | Architectural Design in ${site.city}`, description: site.description, body: home }));
 routes.push(page({ route: '/projects/', depth: 1, title: `Projects | ${site.name}`, description: `${count.all} residential and light commercial projects by ${site.name}: renovations, additions, pool houses, patio covers and commercial interiors across Dallas–Fort Worth.`, body: projectsPage }));
 for (const p of live) {
-  routes.push(page({ route: `/projects/${p.slug}/`, depth: 2, title: `${p.name} | ${site.name}`, description: `${p.name}: ${p.type.toLowerCase()}${p.location ? ' in ' + p.location + ', Texas' : ''}, designed by ${site.name}.`, ogImage: `/img/c-${p.slug}-1400.webp`, body: u => projectPage(u, p) }));
+  routes.push(page({ route: `/projects/${p.slug}/`, depth: 2, title: `${p.name} | ${site.name}`, description: `${p.name}: ${p.type.toLowerCase()}${p.location && p.location !== 'Various' ? ' in ' + p.location + ', Texas' : ''}, designed by ${site.name}.`, ogImage: `/img/c-${p.slug}-1400.webp`, body: u => projectPage(u, p) }));
 }
 routes.push(page({ route: '/about/', depth: 1, title: `Studio | ${site.name}`, description: `${site.principal} founded ${site.name} in ${site.founded}. The studio prepares permit sets, renovations, additions, millwork and patio covers in ${site.city}.`, body: aboutPage }));
 routes.push(page({ route: '/contact/', depth: 1, title: `Contact | ${site.name}`, description: `Start a project with ${site.name}. Email ${site.email} or send a message about your home, addition, renovation or commercial space.`, body: contactPage }));
