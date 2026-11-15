@@ -184,7 +184,7 @@ ${chrome(u, '/')}
       </div>
       <span class="studio-tag label">Our studio</span>
       <div class="studio-copy">
-        <p>Jason Bernal founded JB Lux Designs in ${site.founded}, after <span class="ph">[11]</span> years in architecture across healthcare, commercial and residential projects, including design coordination on multi-phase healthcare work.</p>
+        <p>Jason Bernal founded JB Lux Designs in ${site.founded}, after working in architecture across healthcare, commercial and residential projects, including design coordination on multi-phase healthcare work.</p>
         <p>Today the studio prepares permit sets, renovation and addition drawings, millwork and patio covers for homeowners and contractors, and carries each project through permit approval.</p>
         <a class="pill pill-ink label" href="${u('/about/')}">About the studio ${arrow}</a>
       </div>
@@ -332,10 +332,10 @@ ${topbar(u, '/about/')}
   </section>
   <section class="about pad grid">
     <span class="label k">About</span>
-    <p class="state">Jason Bernal founded JB Lux Designs in ${site.founded} and brings <span class="ph">[11]</span> years of experience in the architecture industry working on healthcare, commercial and residential projects.</p>
+    <p class="state">Jason Bernal founded JB Lux Designs in ${site.founded}, bringing a background in healthcare, commercial and residential architecture to homes and small businesses across Dallas–Fort Worth.</p>
     <div class="about-text">
-      <p>His scale of expertise includes managing design coordination on multi-phase healthcare projects to assisting clients with permit approval documents.</p>
-      <p><span class="ph">[SECOND PARAGRAPH: how you work with homeowners and contractors, and what a client can expect from first call to permit.]</span></p>
+      <p>That background ranges from managing design coordination on multi-phase healthcare projects to preparing the documents clients need for permit approval.</p>
+      <p>The studio works directly with homeowners and with contractors. Each project starts from field measurements of the existing building and a check of the local code, then is modeled in 3D so you can see the design in drawings and renderings before it goes to permit. The result is a clear, complete drawing set that a contractor can price and build from.</p>
     </div>
     <dl class="about-facts label">
       <div><dt>Founded</dt><dd class="num">${site.founded}</dd></div>
@@ -343,7 +343,7 @@ ${topbar(u, '/about/')}
       <div><dt>Based in</dt><dd>${site.city}</dd></div>
       <div><dt>Working across</dt><dd>Dallas–Fort Worth</dd></div>
     </dl>
-    <div class="portrait label">[PHOTO OF JASON]</div>
+    <figure class="portrait">${pic(u, 'portrait', '(max-width:900px) 420px, 33vw', 'Jason Bernal, founder and principal of JB Lux Designs')}<figcaption class="label"><span>${site.principal}</span><span>Founder &amp; Principal</span></figcaption></figure>
   </section>
   <section class="slist pad" id="services" aria-labelledby="sl-h">
     <div class="head-row ruled"><h2 class="mega rise" id="sl-h"><span class="mask"><span>Services</span></span></h2><span class="count label">Residential · Light commercial</span></div>
