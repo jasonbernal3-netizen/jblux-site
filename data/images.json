@@ -1,0 +1,653 @@
+{
+"hero-built": {
+"w": 2400,
+"h": 1350,
+"sizes": [
+2400,
+1600,
+1000
+]
+},
+"hero-built-tall": {
+"w": 1000,
+"h": 1250,
+"sizes": [
+1000
+]
+},
+"h-courtshire": {
+"w": 1600,
+"h": 1200,
+"sizes": [
+1600,
+800
+]
+},
+"h-mckinney": {
+"w": 1600,
+"h": 1067,
+"sizes": [
+1600,
+800
+]
+},
+"h-knockouts": {
+"w": 1200,
+"h": 1200,
+"sizes": [
+1200,
+700
+]
+},
+"h-purdue": {
+"w": 1200,
+"h": 1500,
+"sizes": [
+1200,
+700
+]
+},
+"h-mias": {
+"w": 1600,
+"h": 1200,
+"sizes": [
+1600,
+800
+]
+},
+"mill-creek-axon": {
+"w": 1200,
+"h": 1200,
+"sizes": [
+1200,
+700
+]
+},
+"c-bonita-pool-house": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-courtshire": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-knockouts-hair-salon": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-mill-creek": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-mckinney-patio-cover": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-purdue-avenue": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-mias-hair-salon": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-rockwall-adu": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-grace-ranch-guest-house": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-lakeside-residence": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-goliad-avenue": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"c-prosper-garage-addition": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700,
+320
+]
+},
+"p-bonita-pool-house-01": {
+"w": 1800,
+"h": 1354,
+"sizes": [
+1800,
+900
+]
+},
+"p-bonita-pool-house-02": {
+"w": 1800,
+"h": 1005,
+"sizes": [
+1800,
+900
+]
+},
+"p-courtshire-01": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-courtshire-02": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-courtshire-03": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-courtshire-04": {
+"w": 1350,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-knockouts-hair-salon-01": {
+"w": 1800,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-knockouts-hair-salon-02": {
+"w": 908,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-mill-creek-01": {
+"w": 1800,
+"h": 1228,
+"sizes": [
+1800,
+900
+]
+},
+"p-mill-creek-02": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-mill-creek-03": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-mill-creek-04": {
+"w": 1350,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-mill-creek-05": {
+"w": 1800,
+"h": 1126,
+"sizes": [
+1800,
+900
+]
+},
+"p-mckinney-patio-cover-01": {
+"w": 1800,
+"h": 1120,
+"sizes": [
+1800,
+900
+]
+},
+"p-purdue-avenue-01": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-purdue-avenue-02": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-purdue-avenue-03": {
+"w": 1440,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-purdue-avenue-04": {
+"w": 1440,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-purdue-avenue-05": {
+"w": 1440,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-purdue-avenue-06": {
+"w": 1350,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-purdue-avenue-07": {
+"w": 1440,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-purdue-avenue-08": {
+"w": 1439,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-mias-hair-salon-01": {
+"w": 1800,
+"h": 1317,
+"sizes": [
+1800,
+900
+]
+},
+"p-mias-hair-salon-02": {
+"w": 1800,
+"h": 1691,
+"sizes": [
+1800,
+900
+]
+},
+"p-mias-hair-salon-03": {
+"w": 1800,
+"h": 1301,
+"sizes": [
+1800,
+900
+]
+},
+"p-rockwall-adu-01": {
+"w": 1800,
+"h": 1087,
+"sizes": [
+1800,
+900
+]
+},
+"p-rockwall-adu-02": {
+"w": 1800,
+"h": 819,
+"sizes": [
+1800,
+900
+]
+},
+"p-grace-ranch-guest-house-01": {
+"w": 1800,
+"h": 1071,
+"sizes": [
+1800,
+900
+]
+},
+"p-grace-ranch-guest-house-02": {
+"w": 1800,
+"h": 1203,
+"sizes": [
+1800,
+900
+]
+},
+"p-grace-ranch-guest-house-03": {
+"w": 1350,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-grace-ranch-guest-house-04": {
+"w": 1350,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-grace-ranch-guest-house-05": {
+"w": 1350,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-lakeside-residence-01": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-lakeside-residence-02": {
+"w": 1125,
+"h": 809,
+"sizes": [
+1800,
+900
+]
+},
+"p-lakeside-residence-03": {
+"w": 1800,
+"h": 1350,
+"sizes": [
+1800,
+900
+]
+},
+"p-lakeside-residence-04": {
+"w": 1350,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-goliad-avenue-01": {
+"w": 1800,
+"h": 1227,
+"sizes": [
+1800,
+900
+]
+},
+"p-goliad-avenue-02": {
+"w": 1800,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-goliad-avenue-03": {
+"w": 1519,
+"h": 1800,
+"sizes": [
+1800,
+900
+]
+},
+"p-prosper-garage-addition-01": {
+"w": 1800,
+"h": 787,
+"sizes": [
+1800,
+900
+]
+},
+"p-prosper-garage-addition-02": {
+"w": 1800,
+"h": 901,
+"sizes": [
+1800,
+900
+]
+},
+"ba-mckinney-patio-cover-01-b": {
+"w": 1013,
+"h": 502,
+"sizes": [
+1013
+]
+},
+"ba-courtshire-01-a": {
+"w": 1400,
+"h": 937,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-01-b": {
+"w": 1400,
+"h": 1036,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-02-a": {
+"w": 1400,
+"h": 1050,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-02-b": {
+"w": 1400,
+"h": 788,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-03-a": {
+"w": 1100,
+"h": 1400,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-03-b": {
+"w": 1090,
+"h": 1400,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-04-a": {
+"w": 1051,
+"h": 1400,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-04-b": {
+"w": 1059,
+"h": 1400,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-05-a": {
+"w": 1400,
+"h": 1050,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-05-b": {
+"w": 1400,
+"h": 1251,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-06-a": {
+"w": 1400,
+"h": 970,
+"sizes": [
+1400,
+700
+]
+},
+"ba-courtshire-06-b": {
+"w": 1400,
+"h": 1070,
+"sizes": [
+1400,
+700
+]
+},
+"ba-purdue-avenue-01-a": {
+"w": 1400,
+"h": 1050,
+"sizes": [
+1400,
+700
+]
+},
+"ba-purdue-avenue-01-b": {
+"w": 1400,
+"h": 1293,
+"sizes": [
+1400,
+700
+]
+},
+"ba-purdue-avenue-02-a": {
+"w": 1084,
+"h": 1400,
+"sizes": [
+1400,
+700
+]
+},
+"ba-purdue-avenue-02-b": {
+"w": 1313,
+"h": 1400,
+"sizes": [
+1400,
+700
+]
+},
+"p-mill-creek-06": {
+"w": 1800,
+"h": 1773,
+"sizes": [
+1800,
+900
+]
+},
+"ba-mill-creek-01-b": {
+"w": 1400,
+"h": 933,
+"sizes": [
+1400,
+700
+]
+}
+}

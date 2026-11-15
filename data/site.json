@@ -1,0 +1,23 @@
+{
+ "name":"JB Lux Designs",
+ "legal":"JB Lux Designs, LLC",
+ "url":"https://jbluxdesigns.com",
+ "email":"jb@jbluxdesigns.com",
+ "city":"Dallas, Texas",
+ "phone":"",
+ "instagram":"",
+ "founded":"2018",
+ "principal":"Jason Bernal",
+ "tagline":"Architectural design for homes and small businesses across Dallas–Fort Worth.",
+ "description":"JB Lux Designs is an architectural design practice in Dallas, Texas: permit sets, renovations, additions, millwork and patio covers for homeowners, contractors and light commercial clients.",
+ "featured":["courtshire","bonita-pool-house","mckinney-patio-cover","purdue-avenue","knockouts-hair-salon","mias-hair-salon"],
+ "services":[
+  {"name":"Permit sets","examples":[]},
+  {"name":"Renovations","examples":["courtshire","purdue-avenue"]},
+  {"name":"Additions","examples":["mill-creek","prosper-garage-addition","goliad-avenue"]},
+  {"name":"Millwork","examples":["courtshire"]},
+  {"name":"Patio covers","examples":["mckinney-patio-cover","bonita-pool-house"]},
+  {"name":"Commercial","examples":["knockouts-hair-salon","mias-hair-salon"]}
+ ],
+ "projectTypes":["New home","Addition","Renovation","Patio cover or outdoor structure","Millwork","Commercial interior","Permit set","Something else"]
+}

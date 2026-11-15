@@ -1,0 +1,368 @@
+[
+ {
+  "slug": "bonita-pool-house",
+  "name": "Bonita Pool House",
+  "short": "Bonita Pool House",
+  "type": "Pool house",
+  "cat": "res",
+  "location": "",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Completed pool house and pool",
+    "kind": "photo"
+   },
+   {
+    "cap": "Design rendering",
+    "kind": "photo"
+   }
+  ]
+ },
+ {
+  "slug": "courtshire",
+  "name": "Courtshire",
+  "short": "Courtshire",
+  "type": "Interior renovation",
+  "cat": "res",
+  "location": "Midway Hollow, Dallas",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Living and dining",
+    "kind": "photo"
+   },
+   {
+    "cap": "Dining room",
+    "kind": "photo"
+   },
+   {
+    "cap": "Butler’s pantry",
+    "kind": "photo"
+   },
+   {
+    "cap": "Kitchen range wall and breakfast nook",
+    "kind": "photo"
+   }
+  ],
+  "ba": [
+   {
+    "t": "Entry and dining"
+   },
+   {
+    "t": "Living and kitchen"
+   },
+   {
+    "t": "Kitchen"
+   },
+   {
+    "t": "Kitchen, toward the living room"
+   },
+   {
+    "t": "Bedroom"
+   },
+   {
+    "t": "Living room"
+   }
+  ]
+ },
+ {
+  "slug": "knockouts-hair-salon",
+  "name": "Knockouts Hair Salon",
+  "short": "Knockouts",
+  "type": "Commercial interior",
+  "cat": "com",
+  "location": "",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Reception, rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Floor plan",
+    "kind": "drawing"
+   }
+  ]
+ },
+ {
+  "slug": "mill-creek",
+  "name": "Mill Creek",
+  "short": "Mill Creek",
+  "type": "Second-story addition",
+  "cat": "res",
+  "location": "",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Kitchen and living room",
+    "kind": "photo"
+   },
+   {
+    "cap": "Living, dining and kitchen",
+    "kind": "photo"
+   },
+   {
+    "cap": "Second-floor landing",
+    "kind": "photo"
+   },
+   {
+    "cap": "Second-floor landing",
+    "kind": "photo"
+   },
+   {
+    "cap": "Exterior rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Axonometric of the addition",
+    "kind": "drawing"
+   }
+  ],
+  "ba": [
+   {
+    "t": "Street view",
+    "a": "p-mill-creek-05",
+    "b": "ba-mill-creek-01-b",
+    "lb": "Existing",
+    "la": "Proposed"
+   }
+  ]
+ },
+ {
+  "slug": "mckinney-patio-cover",
+  "name": "McKinney Patio Cover",
+  "short": "McKinney Patio Cover",
+  "type": "Patio cover",
+  "cat": "res",
+  "location": "McKinney",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Patio cover, rendering",
+    "kind": "photo"
+   }
+  ],
+  "ba": [
+   {
+    "t": "Patio",
+    "a": "p-mckinney-patio-cover-01",
+    "b": "ba-mckinney-patio-cover-01-b",
+    "la": "Proposed",
+    "lb": "Existing"
+   }
+  ]
+ },
+ {
+  "slug": "purdue-avenue",
+  "name": "Purdue Avenue",
+  "short": "Purdue Avenue",
+  "type": "Interior renovation",
+  "cat": "res",
+  "location": "",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Kitchen, toward the living room",
+    "kind": "photo"
+   },
+   {
+    "cap": "Island and living room",
+    "kind": "photo"
+   },
+   {
+    "cap": "Kitchen",
+    "kind": "photo"
+   },
+   {
+    "cap": "Kitchen cabinetry",
+    "kind": "photo"
+   },
+   {
+    "cap": "Kitchen and living room",
+    "kind": "photo"
+   },
+   {
+    "cap": "Living room",
+    "kind": "photo"
+   },
+   {
+    "cap": "Rear patio",
+    "kind": "photo"
+   },
+   {
+    "cap": "Structural diagram",
+    "kind": "drawing"
+   }
+  ],
+  "ba": [
+   {
+    "t": "Rear exterior"
+   },
+   {
+    "t": "Mudroom"
+   }
+  ]
+ },
+ {
+  "slug": "mias-hair-salon",
+  "name": "Mia’s Hair Salon",
+  "short": "Mia’s",
+  "type": "Commercial interior",
+  "cat": "com",
+  "location": "",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Salon floor, as built",
+    "kind": "photo"
+   },
+   {
+    "cap": "Design rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "3D plan view",
+    "kind": "drawing"
+   }
+  ]
+ },
+ {
+  "slug": "rockwall-adu",
+  "name": "Rockwall ADU",
+  "short": "Rockwall ADU",
+  "type": "Accessory dwelling unit",
+  "cat": "res",
+  "location": "Rockwall",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Existing floor plan",
+    "kind": "drawing"
+   }
+  ]
+ },
+ {
+  "slug": "grace-ranch-guest-house",
+  "name": "Grace Ranch Guest House",
+  "short": "Grace Ranch",
+  "type": "Guest house",
+  "cat": "res",
+  "location": "",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Site rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Floor plan",
+    "kind": "drawing"
+   },
+   {
+    "cap": "Under construction",
+    "kind": "photo"
+   },
+   {
+    "cap": "Under construction",
+    "kind": "photo"
+   },
+   {
+    "cap": "Under construction",
+    "kind": "photo"
+   }
+  ]
+ },
+ {
+  "slug": "lakeside-residence",
+  "name": "Lakeside Residence",
+  "short": "Lakeside Residence",
+  "type": "New residence",
+  "cat": "res",
+  "location": "",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Framing",
+    "kind": "photo"
+   },
+   {
+    "cap": "East and west elevations",
+    "kind": "drawing"
+   },
+   {
+    "cap": "Framing",
+    "kind": "photo"
+   },
+   {
+    "cap": "Framing, with a printed model of the house",
+    "kind": "photo"
+   }
+  ]
+ },
+ {
+  "slug": "goliad-avenue",
+  "name": "Goliad Avenue",
+  "short": "Goliad Avenue",
+  "type": "Second floor",
+  "cat": "res",
+  "location": "",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Bedroom, rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Second-floor plan",
+    "kind": "drawing"
+   },
+   {
+    "cap": "Plan perspective",
+    "kind": "drawing"
+   }
+  ]
+ },
+ {
+  "slug": "prosper-garage-addition",
+  "name": "Prosper Garage Addition",
+  "short": "Prosper Garage",
+  "type": "Garage addition",
+  "cat": "res",
+  "location": "Prosper",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Rendering",
+    "kind": "photo"
+   }
+  ]
+ },
+ {
+  "slug": "cherie-lane-boutique",
+  "name": "Cherie Lane Boutique",
+  "short": "Cherie Lane",
+  "type": "Boutique",
+  "cat": "com",
+  "location": "",
+  "year": "",
+  "soon": true
+ },
+ {
+  "slug": "nuli-studios-med-spa",
+  "name": "Nuli Studios Med Spa",
+  "short": "Nuli Studios",
+  "type": "Med spa",
+  "cat": "com",
+  "location": "",
+  "year": "",
+  "soon": true
+ }
+]
