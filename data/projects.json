@@ -204,6 +204,21 @@
   ]
  },
  {
+  "slug": "winton-street",
+  "name": "Winton Street",
+  "short": "Winton Street",
+  "type": "Residential",
+  "cat": "res",
+  "location": "Dallas",
+  "year": "2026",
+  "gallery": [
+   {
+    "cap": "Exterior rendering",
+    "kind": "photo"
+   }
+  ]
+ },
+ {
   "slug": "mias-hair-salon",
   "name": "Mia’s Hair Salon",
   "short": "Mia’s",

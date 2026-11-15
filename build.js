@@ -128,7 +128,7 @@ function card(u, p, sizes, extra = '') {
 /* ── pages ── */
 function home(u) {
   const f = site.featured.map(s => bySlug[s]);
-  const homeImg = { 'courtshire': ['h-courtshire', ''], 'bonita-casita': ['hero-built-tall', ' s'], 'mill-creek': ['h-mill-creek', ' s'], 'purdue-avenue': ['h-purdue-mud', ''], 'knockouts-hair-salon': ['h-knockouts', ''], 'mias-hair-salon': ['h-mias', ' s'] };
+  const homeImg = { 'courtshire': ['h-courtshire', ''], 'bonita-casita': ['hero-built-tall', ' s'], 'mill-creek': ['h-mill-creek', ' s'], 'purdue-avenue': ['h-purdue-mud', ''], 'knockouts-hair-salon': ['h-knockouts', ''], 'winton-street': ['h-winton', ' s'] };
   const hc = (p, i) => {
     const [img, cls] = homeImg[p.slug] || ['c-' + p.slug, ''];
     return `<a class="card${cls} reveal" href="${u(`/projects/${p.slug}/`)}">
