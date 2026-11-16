@@ -408,6 +408,20 @@
     "role": "Structural engineer",
     "name": "LR Engineering"
    }
+  ],
+  "details": [
+   {
+    "img": "d-purdue-avenue-01",
+    "kind": "drawing",
+    "t": "Sink wall and banquette",
+    "d": "Cabinetry runs to the ceiling along the sink wall, with glass-front uppers, an apron-front sink under the window and a built-in banquette at the breakfast nook."
+   },
+   {
+    "img": "d-purdue-avenue-02",
+    "kind": "drawing",
+    "t": "Range wall and living room built-ins",
+    "d": "The range wall wraps around the corner beside a tall built-in refrigerator. Across the room, built-in shelving and cabinets frame the fireplace in the living room."
+   }
   ]
  },
  {
