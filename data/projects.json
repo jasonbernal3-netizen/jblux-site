@@ -196,6 +196,10 @@
   "year": "2024",
   "gallery": [
    {
+    "cap": "Front exterior, completed",
+    "kind": "photo"
+   },
+   {
     "cap": "Kitchen and living room",
     "kind": "photo"
    },
@@ -214,21 +218,54 @@
    {
     "cap": "Exterior rendering",
     "kind": "photo"
-   },
-   {
-    "cap": "Axonometric of the addition",
-    "kind": "drawing"
    }
   ],
   "ba": [
    {
     "t": "Street view",
-    "a": "p-mill-creek-05",
     "b": "ba-mill-creek-01-b",
-    "lb": "Existing",
-    "la": "Proposed"
+    "a": "ba-mill-creek-01-a"
    }
-  ]
+  ],
+  "credits": [
+   {
+    "role": "Contractor",
+    "name": "NTX Construction Solutions"
+   },
+   {
+    "role": "Structural engineer",
+    "name": "RCS Enterprises"
+   }
+  ],
+  "sequence": {
+   "dir": "seq/mill-creek",
+   "frames": 70,
+   "w": 1000,
+   "h": 985,
+   "title": "How the second story was added",
+   "steps": [
+    {
+     "at": 0,
+     "t": "Existing house",
+     "d": "The original single-story house, with the roof area to be removed outlined."
+    },
+    {
+     "at": 0.217,
+     "t": "Roof removed",
+     "d": "The roof over the center of the house lifts away, opening the plan below."
+    },
+    {
+     "at": 0.507,
+     "t": "Second story added",
+     "d": "The new second story is set onto the existing walls below."
+    },
+    {
+     "at": 0.797,
+     "t": "Completed house",
+     "d": "The finished two-story house."
+    }
+   ]
+  }
  },
  {
   "slug": "mckinney-patio-cover",
