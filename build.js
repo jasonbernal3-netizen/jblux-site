@@ -329,7 +329,7 @@ ${topbar(u, '/projects/')}
         <ol class="seq-steps">${s.steps.map((x, i) => `<li${i ? '' : ' class="on"'}><span class="label num">0${i + 1}</span><span class="seq-t">${esc(x.t)}</span><span class="seq-d">${esc(x.d)}</span></li>`).join('')}</ol>
         <div class="seq-bar" aria-hidden="true"><span id="seq-fill"></span></div>
       </div>
-      <div class="seq-stage"><canvas id="seq-canvas" width="${s.w}" height="${s.h}" role="img" aria-label="Animated axonometric: ${esc(s.steps.map(x => x.t).join(', '))}"></canvas><img id="seq-still" src="${u('/img/' + s.dir + '/' + String(s.frames - 1).padStart(3, '0') + '.webp')}" alt="Axonometric of the completed plan" width="${s.w}" height="${s.h}" loading="lazy"></div>
+      <div class="seq-stage"><canvas id="seq-canvas" width="${s.w}" height="${s.h}" role="img" aria-label="${esc(s.label || 'Animated axonometric')}: ${esc(s.steps.map(x => x.t).join(', '))}"></canvas><img id="seq-still" src="${u('/img/' + s.dir + '/' + String(s.frames - 1).padStart(3, '0') + '.webp')}" alt="${esc(s.alt || 'Axonometric of the completed plan')}" width="${s.w}" height="${s.h}" loading="lazy"></div>
     </div>
   </section>`)(p.sequence) : ''}
   ${p.gallery.length > 1 ? `<section class="gallery pad" aria-label="Gallery">

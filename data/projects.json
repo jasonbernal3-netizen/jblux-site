@@ -57,6 +57,37 @@
    "poster": "v-bonita-casita-poster.webp",
    "t": "Walkthrough",
    "d": "Along the pool deck to the casita, then around to the spa and lounge deck."
+  },
+  "sequence": {
+   "dir": "seq/bonita-casita",
+   "frames": 68,
+   "w": 900,
+   "h": 1220,
+   "title": "How the pass-through window opens",
+   "label": "Animated rendering",
+   "alt": "Rendering of the casita kitchen with the pass-through window fully open",
+   "steps": [
+    {
+     "at": 0,
+     "t": "Closed",
+     "d": "The window over the casita sink, closed, with the pool and main house beyond."
+    },
+    {
+     "at": 0.209,
+     "t": "Lower panel lifts",
+     "d": "The bottom panel swings out and up on its hinges."
+    },
+    {
+     "at": 0.507,
+     "t": "Panels fold",
+     "d": "Both panels fold together as they rise toward the head of the opening."
+    },
+    {
+     "at": 0.806,
+     "t": "Fully open",
+     "d": "The window folds up out of the way, opening the kitchen to the pool deck."
+    }
+   ]
   }
  },
  {
