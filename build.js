@@ -265,6 +265,16 @@ function beforeAfter(u, p) {
   const rows = p.ba.map((r, i) => {
     const base = `ba-${p.slug}-${String(i + 1).padStart(2, '0')}`;
     const a = r.a || base + '-a', b = r.b || base + '-b';
+    if (r.slider) return `<div class="ba-pair ba-slide">
+      <span class="label">${esc(r.t)}<br><span class="ba-hint">Drag to compare</span></span>
+      <div class="cmp" style="--p:50%">
+        ${pic(u, a, '(max-width:900px) 100vw, 66vw', `${p.name}, ${r.t.toLowerCase()}: after`)}
+        <div class="cmp-b" aria-hidden="true">${pic(u, b, '(max-width:900px) 100vw, 66vw', `${p.name}, ${r.t.toLowerCase()}: before`)}</div>
+        <span class="cmp-line" aria-hidden="true"><span class="cmp-knob"></span></span>
+        <span class="cmp-tag cmp-tb label">Before</span><span class="cmp-tag cmp-ta label">After</span>
+        <input class="cmp-r" type="range" min="0" max="100" step="0.1" value="50" aria-label="${esc(r.t)}: slide between before and after">
+      </div>
+    </div>`;
     return `<div class="ba-pair">
       <span class="label">${esc(r.t)}</span>
       <figure>${pic(u, b, '(max-width:900px) 50vw, 33vw', `${p.name}, ${r.t.toLowerCase()}: before`)}<figcaption class="label">${r.lb || 'Before'}</figcaption></figure>

@@ -124,6 +124,31 @@
     }
   }
 
+  /* project: before/after drag slider */
+  $$('.cmp').forEach(function (c) {
+    var r = $('.cmp-r', c);
+    function set(v) { c.style.setProperty('--p', v + '%'); }
+    r.addEventListener('input', function () { set(r.value); c.classList.add('touched'); });
+    var drag = false;
+    function at(e) { var b = c.getBoundingClientRect(), v = Math.max(0, Math.min(100, (e.clientX - b.left) / b.width * 100)); set(v.toFixed(2)); r.value = v; c.classList.add('touched'); }
+    c.addEventListener('pointerdown', function (e) { drag = true; c.setPointerCapture(e.pointerId); at(e); });
+    c.addEventListener('pointermove', function (e) { if (drag) at(e); });
+    c.addEventListener('pointerup', function () { drag = false; });
+    c.addEventListener('pointercancel', function () { drag = false; });
+    if (!reduce && 'IntersectionObserver' in window) {   // one gentle sweep when it first comes into view, so it reads as interactive
+      var o = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return; o.disconnect();
+        var t0 = performance.now();
+        (function k(t) {
+          if (c.classList.contains('touched')) return;
+          var q = Math.min((t - t0) / 1800, 1), v = 50 + Math.sin(q * Math.PI * 2) * 22 * (1 - q);
+          set(v.toFixed(2)); r.value = v; if (q < 1) requestAnimationFrame(k);
+        })(t0);
+      }, { threshold: .6 });
+      o.observe(c);
+    }
+  });
+
   /* project: lightbox */
   var lb = $('#lb'), zooms = $$('.zoom');
   if (lb && zooms.length) {

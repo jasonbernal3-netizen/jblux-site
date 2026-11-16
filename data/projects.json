@@ -232,8 +232,9 @@
    },
    {
     "t": "Living room",
-    "b": "ba-mill-creek-02-b",
-    "a": "ba-mill-creek-02-a"
+    "b": "ba-mill-creek-03-b",
+    "a": "ba-mill-creek-03-a",
+    "slider": true
    }
   ],
   "credits": [
