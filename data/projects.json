@@ -150,10 +150,18 @@
   },
   "details": [
    {
+    "img": "d-courtshire-01",
     "t": "Lit step at the entry",
     "d": "A curved, lit step resolves an existing change in level and marks the move from the living areas to the bedroom wing."
    },
    {
+    "img": "d-courtshire-03",
+    "t": "Section through the step",
+    "kind": "drawing",
+    "d": "A Schluter stair nosing caps the step, with a corner-mount LED channel set beneath it to wash the 4-inch tile riser."
+   },
+   {
+    "img": "d-courtshire-02",
     "t": "Custom sconce lighting",
     "d": "Custom-made sconces set against the arched openings between the kitchen and the butler’s pantry."
    }
