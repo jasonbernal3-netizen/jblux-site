@@ -149,6 +149,34 @@
     }
   });
 
+  /* project: pinned walkthrough film — plays while in view, grows to full height as you scroll into it */
+  var film = $('#film');
+  if (film) {
+    var fv = $('.film-v', film), fstage = $('.film-stage', film), loadedF = false;
+    function loadF() { if (loadedF) return; loadedF = true; fv.src = fv.canPlayType('video/mp4; codecs="avc1.640028"') ? fv.dataset.src : fv.dataset.webm; }
+    var fo = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { loadF(); if (!reduce) { var pr = fv.play(); if (pr && pr.catch) pr.catch(function () {}); } }
+        else fv.pause();
+      });
+    }, { rootMargin: '0px 0px -25% 0px' });
+    fo.observe(film);
+    new IntersectionObserver(function (es) { if (es[0].isIntersecting) loadF(); }, { rootMargin: '100% 0px' }).observe(film);
+    if (reduce) { fv.controls = true; }
+    else {
+      var fTick = false;
+      var fUpd = function () {
+        fTick = false;
+        var r = film.getBoundingClientRect(), h = innerHeight;
+        var p = Math.min(1, Math.max(0, (h - r.top) / h));          // 0 when the section top reaches the bottom of the screen, 1 when it reaches the top
+        fstage.style.setProperty('--s', (0.72 + 0.28 * p).toFixed(4));
+        film.classList.toggle('lit', p > .96);
+      };
+      addEventListener('scroll', function () { if (!fTick) { fTick = true; requestAnimationFrame(fUpd); } }, { passive: true });
+      addEventListener('resize', fUpd); fUpd();
+    }
+  }
+
   /* project: lightbox */
   var lb = $('#lb'), zooms = $$('.zoom');
   if (lb && zooms.length) {

@@ -298,7 +298,13 @@
     "img": "b-mill-creek-04",
     "t": "Skylights at dusk"
    }
-  ]
+  ],
+  "film": {
+   "src": "v-mill-creek.mp4",
+   "poster": "v-mill-creek-poster.webp",
+   "t": "Walkthrough",
+   "d": "From the new second-floor playroom, down the stair to the open living, dining and kitchen."
+  }
  },
  {
   "slug": "mckinney-patio-cover",

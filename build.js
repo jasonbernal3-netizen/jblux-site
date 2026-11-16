@@ -36,7 +36,7 @@ const MARK = a => svg('JB-Lux-Designs-favicon-JB-black.svg', a);
    replacing a photo under the same file name then changes its URL and browsers fetch the new one */
 const _vh = {};
 function ver(p) {
-  if (!/^\/img\/.+\.(webp|jpg|png|svg)$/.test(p)) return p;
+  if (!/^\/img\/.+\.(webp|jpg|png|svg|mp4|webm)$/.test(p)) return p;
   if (!(p in _vh)) { try { _vh[p] = require('crypto').createHash('md5').update(require('fs').readFileSync(require('path').join(__dirname, 'static', p))).digest('hex').slice(0, 8); } catch (e) { _vh[p] = ''; } }
   return _vh[p] ? p + '?v=' + _vh[p] : p;
 }
@@ -346,6 +346,13 @@ ${p.details ? `
     <div class="det-grid">${p.details.map((x, i) => { const n = x.img || ('d-' + p.slug + '-' + String(i + 1).padStart(2, '0')), m = images[n]; return `<figure class="g det${x.kind === 'drawing' ? ' drawing' : ''} reveal"><button class="zoom" type="button" data-full="${u('/img/' + n + '-' + Math.max(...m.sizes) + '.webp')}" data-cap="${esc(x.t)}" aria-label="Enlarge: ${esc(x.t)}">${pic(u, n, '(max-width:720px) 100vw, 50vw', p.name + ': ' + x.t.toLowerCase())}</button><figcaption class="label"><span>${esc(x.t)}</span><span class="num">D${i + 1}</span></figcaption><p class="det-d">${esc(x.d)}</p></figure>`; }).join('')}</div>
   </section>` : ''}
 ${beforeAfter(u, p)}
+${p.film ? `
+  <section class="film" id="film" aria-label="${esc(p.film.t)}">
+    <div class="film-pin">
+      <div class="film-text pad"><p class="label">${esc(p.film.t)}</p><p class="film-sub">${esc(p.film.d || '')}</p></div>
+      <div class="film-stage"><video class="film-v" muted playsinline loop preload="none" poster="${u('/img/' + p.film.poster)}" data-src="${u('/img/' + p.film.src)}" data-webm="${u('/img/' + p.film.src.replace(/\.mp4$/, '.webm'))}" aria-label="${esc(p.name)}: ${esc(p.film.t.toLowerCase())}"></video></div>
+    </div>
+  </section>` : ''}
   <a class="next pad" href="${u(`/projects/${next.slug}/`)}">
     <div class="ruled"><span><span class="label">Next project</span><span class="nm">${esc(next.name)}</span></span><span class="arr" aria-hidden="true">→</span></div>
   </a>

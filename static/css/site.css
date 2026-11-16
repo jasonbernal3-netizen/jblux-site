@@ -465,3 +465,17 @@ html:not(.js) .seq-d,.seq.static .seq-d{max-height:none;opacity:1;margin-top:6px
 /* keep tall drawings (floor plans) within one screen height */
 .cmp{max-width:calc(88svh * var(--ar, 1.5))}
 .cmp.ink .cmp-line{background:var(--ink)}.cmp.ink .cmp-knob{box-shadow:0 0 0 1.5px var(--ink)}
+/* project: pinned walkthrough film (portrait video, stays on screen while you scroll past it) */
+.film{position:relative;height:220vh;margin-top:clamp(56px,7vw,110px)}
+.film-pin{position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:minmax(0,1fr);column-gap:var(--gap);overflow:hidden}
+.film-text{grid-column:1/4;align-self:end;padding-bottom:clamp(28px,4vw,56px)}
+.film-sub{color:var(--mute);max-width:26ch;margin-top:10px;font-size:15px;line-height:1.5}
+.film-stage{grid-column:4/10;min-height:0;display:flex;align-items:center;justify-content:center;padding:12px 0;--s:1}
+.film-v{display:block;height:100%;width:auto;max-width:100%;aspect-ratio:9/16;object-fit:cover;background:var(--pill);transform:scale(var(--s));transform-origin:50% 50%;will-change:transform}
+@media (max-width:900px){
+  .film{height:200vh}
+  .film-pin{display:flex;flex-direction:column}
+  .film-text{align-self:stretch;padding-top:calc(var(--gap) + 64px);padding-bottom:12px}
+  .film-stage{flex:1;padding:0 0 16px}
+}
+@media (prefers-reduced-motion:reduce){.film{height:auto}.film-pin{position:static;height:auto;padding:24px 0}.film-v{height:80vh;transform:none}}
