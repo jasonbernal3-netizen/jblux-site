@@ -113,7 +113,41 @@
   "summary": [
    "This 1960s ranch house in North Dallas had a closed-off floor plan that the client wanted to open up. Three load-bearing walls were removed, and four new LVL beams were set into the attic to carry the roof load. The result is one continuous kitchen, living and dining area, with natural light and sight lines running from the front of the house to the back.",
    "The details carry the same care. A quartzite-wrapped range hood anchors the kitchen. At the entry, a lit step resolves an existing change in level and marks the transition from the shared living spaces to the private bedroom wing. Custom pendant and sconce lighting completes the scheme."
-  ]
+  ],
+  "sequence": {
+   "dir": "seq/courtshire",
+   "frames": 119,
+   "w": 1000,
+   "h": 1000,
+   "title": "How the plan opened up",
+   "steps": [
+    {
+     "at": 0,
+     "t": "Existing plan",
+     "d": "A 1960s ranch layout, with the kitchen, living and dining rooms closed off from one another."
+    },
+    {
+     "at": 0.12,
+     "t": "Load-bearing walls removed",
+     "d": "Three load-bearing walls come out to join the kitchen, living and dining areas."
+    },
+    {
+     "at": 0.34,
+     "t": "New LVL beams",
+     "d": "Four LVL beams, set into the attic, carry the roof load the walls used to support."
+    },
+    {
+     "at": 0.5,
+     "t": "Millwork and furnishings",
+     "d": "New cabinetry, built-ins and furniture fill the open plan."
+    },
+    {
+     "at": 0.88,
+     "t": "Completed plan",
+     "d": "One continuous space, with light and sight lines from the front of the house to the back."
+    }
+   ]
+  }
  },
  {
   "slug": "knockouts-hair-salon",

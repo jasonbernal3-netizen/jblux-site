@@ -277,6 +277,39 @@ a.card:hover .frame img{transform:scale(1.025)}
 .next .label{color:var(--mute);display:block;margin-bottom:10px}
 .next .arr{font-size:clamp(2rem,4vw,4.5rem);line-height:1}
 
+
+/* scroll-scrubbed drawing sequence: the panel pins while the page scrolls; only the drawing changes */
+.seq{position:relative;height:calc(var(--steps) * 85vh + 100vh);margin-bottom:clamp(44px,5.5vw,96px)}
+.seq-pin{position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:center;overflow:hidden}
+.seq-text{grid-column:1/5;display:flex;flex-direction:column;gap:22px;min-width:0}
+.seq-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.seq-steps li{display:grid;grid-template-columns:2.4rem minmax(0,1fr);column-gap:10px;border-top:1px solid var(--rule);padding:12px 0;color:var(--mute);transition:color .4s ease,border-color .4s ease}
+.seq-steps li .label{color:inherit;padding-top:.35em}
+.seq-t{font-size:clamp(1.15rem,.95rem + .6vw,1.5rem);font-weight:400;letter-spacing:-.015em;line-height:1.2}
+.seq-d{grid-column:2;font-size:.9375rem;line-height:1.4;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s var(--ease-out),opacity .4s ease,margin .4s ease}
+.seq-steps li.on{color:var(--ink);border-top-color:var(--ink)}
+.seq-steps li.on .seq-d{max-height:6em;opacity:1;margin-top:6px;color:var(--mute)}
+.seq-bar{height:2px;background:var(--rule)}
+.seq-bar span{display:block;height:100%;width:0;background:var(--ink)}
+.seq-stage{grid-column:5/13;position:relative;height:92vh;height:92svh;display:grid;min-width:0;min-height:0}
+.seq-stage canvas,.seq-stage img{width:100%;height:100%;max-width:100%;object-fit:contain;grid-area:1/1;min-height:0}
+.seq-stage img{opacity:0}
+html:not(.js) .seq,.seq.static{height:auto}
+html:not(.js) .seq-pin,.seq.static .seq-pin{position:relative;height:auto;padding-block:40px}
+html:not(.js) .seq-stage canvas,.seq.static .seq-stage canvas{display:none}
+html:not(.js) .seq-stage img,.seq.static .seq-stage img{opacity:1;height:auto}
+html:not(.js) .seq-d,.seq.static .seq-d{max-height:none;opacity:1;margin-top:6px}
+@media (max-width:900px){
+  .seq{height:calc(var(--steps) * 70vh + 100vh)}
+  .seq-pin{grid-template-rows:auto minmax(0,1fr);align-items:start;padding-top:calc(env(safe-area-inset-top,0px) + 76px);padding-bottom:16px;row-gap:8px}
+  .seq-text,.seq-stage{grid-column:1/-1}
+  .seq-text{gap:12px}
+  .seq-steps li{display:none;border-top-color:var(--ink);padding:10px 0 0}
+  .seq-steps li.on{display:grid}
+  .seq-stage{height:100%}
+  .seq.static .seq-steps li{display:grid}
+}
+
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:95;background:var(--ink);color:var(--white);display:grid;grid-template-rows:auto 1fr auto;padding:calc(env(safe-area-inset-top,0px) + 16px) var(--pad-r) calc(env(safe-area-inset-bottom,0px) + 16px) var(--pad)}
 .lb-bar,.lb-foot{display:flex;justify-content:space-between;align-items:center;gap:16px}

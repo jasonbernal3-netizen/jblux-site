@@ -86,6 +86,44 @@
     });
   });
 
+  /* project: scroll-scrubbed drawing sequence */
+  var seq = $('#seq');
+  if (seq) {
+    var cv = $('#seq-canvas'), ctx = cv.getContext('2d'), N = +seq.dataset.frames, base = seq.dataset.base;
+    var stops = seq.dataset.steps.split(',').map(Number), lis = $$('.seq-steps li'), fill = $('#seq-fill');
+    var imgs = new Array(N), loaded = new Array(N), started = false, cur = -1, want = 0;
+    if (reduce) { seq.classList.add('static'); }
+    else {
+      var src = function (i) { return base + String(i).padStart(3, '0') + '.webp'; };
+      var draw = function (i) {
+        var k = i; while (k > 0 && !loaded[k]) k--;            // nearest loaded frame at or before i
+        if (!loaded[k]) return;
+        if (k === cur) return; cur = k;
+        ctx.clearRect(0, 0, cv.width, cv.height); ctx.drawImage(imgs[k], 0, 0, cv.width, cv.height);
+      };
+      var load = function () {
+        if (started) return; started = true;
+        // load every 8th frame first so scrubbing works early, then fill in the rest
+        var order = []; for (var s = 8; s >= 1; s = s / 2 | 0) { for (var i = 0; i < N; i += s) if (order.indexOf(i) < 0) order.push(i); if (s === 1) break; }
+        order.forEach(function (i) { var im = new Image(); im.decoding = 'async'; im.onload = function () { loaded[i] = true; if (i <= want) { cur = -1; draw(want); } }; im.src = src(i); imgs[i] = im; });
+      };
+      var tick = false;
+      var update = function () {
+        tick = false;
+        var r = seq.getBoundingClientRect(), span = r.height - innerHeight;
+        var p = Math.min(1, Math.max(0, -r.top / (span || 1)));
+        want = Math.round(p * (N - 1)); draw(want);
+        var a = 0; stops.forEach(function (s, i) { if (p >= s - 0.001) a = i; });
+        lis.forEach(function (li, i) { li.classList.toggle('on', i === a); });
+        if (fill) fill.style.width = (p * 100).toFixed(1) + '%';
+      };
+      var near = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { load(); near.disconnect(); } }, { rootMargin: '150% 0px' });
+      near.observe(seq);
+      addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
+      addEventListener('resize', update); update();
+    }
+  }
+
   /* project: lightbox */
   var lb = $('#lb'), zooms = $$('.zoom');
   if (lb && zooms.length) {

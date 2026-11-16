@@ -302,6 +302,16 @@ ${topbar(u, '/projects/')}
     <span class="label">${p.summary ? 'About the project' : 'Credits'}</span>
     ${p.summary ? `<div class="proj-text">${[].concat(p.summary).map(t => `<p>${esc(t)}</p>`).join('')}</div>` : ''}${p.credits ? `<dl class="credits label">${p.credits.map(c => `<div><dt>${esc(c.role)}</dt><dd>${esc(c.name)}</dd></div>`).join('')}</dl>` : ''}
   </section>` : '<div class="proj-gap"></div>'}
+  ${p.sequence ? (s => `<section class="seq" id="seq" style="--steps:${s.steps.length}" data-base="${u('/img/' + s.dir + '/000.webp').replace(/000\.webp$/, '')}" data-frames="${s.frames}" data-steps="${s.steps.map(x => x.at).join(',')}" aria-label="${esc(s.title)}">
+    <div class="seq-pin pad">
+      <div class="seq-text">
+        <span class="label mute">${esc(s.title)}</span>
+        <ol class="seq-steps">${s.steps.map((x, i) => `<li${i ? '' : ' class="on"'}><span class="label num">0${i + 1}</span><span class="seq-t">${esc(x.t)}</span><span class="seq-d">${esc(x.d)}</span></li>`).join('')}</ol>
+        <div class="seq-bar" aria-hidden="true"><span id="seq-fill"></span></div>
+      </div>
+      <div class="seq-stage"><canvas id="seq-canvas" width="${s.w}" height="${s.h}" role="img" aria-label="Animated axonometric: ${esc(s.steps.map(x => x.t).join(', '))}"></canvas><img id="seq-still" src="${u('/img/' + s.dir + '/' + String(s.frames - 1).padStart(3, '0') + '.webp')}" alt="Axonometric of the completed plan" width="${s.w}" height="${s.h}" loading="lazy"></div>
+    </div>
+  </section>`)(p.sequence) : ''}
   ${p.gallery.length > 1 ? `<section class="gallery pad" aria-label="Gallery">
     ${gallery(u, p)}
   </section>` : ''}
