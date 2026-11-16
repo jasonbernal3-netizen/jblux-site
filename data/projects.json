@@ -447,7 +447,13 @@
     "img": "b-purdue-avenue-04",
     "t": "New steel beam over the living room"
    }
-  ]
+  ],
+  "film": {
+   "src": "v-purdue-avenue.mp4",
+   "poster": "v-purdue-avenue-poster.webp",
+   "t": "Walkthrough",
+   "d": "In through the new mudroom, past the enclosed-porch living room, to the breakfast nook and kitchen."
+  }
  },
  {
   "slug": "winton-street",
