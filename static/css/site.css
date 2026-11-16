@@ -258,7 +258,7 @@ a.card:hover .frame img{transform:scale(1.025)}
 .g.drawing .zoom{background:var(--white);border:1px solid var(--rule)}
 .g figcaption{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--ink);padding-top:10px}
 .g figcaption span:last-child{color:var(--mute)}
-.g.wide-l{grid-column:1/10}.g.wide-r{grid-column:4/13}
+.g.wide-l{grid-column:1/10}.g.wide-r{grid-column:4/13}.g.full{grid-column:1/-1}
 .g.half-l{grid-column:1/7}.g.half-r{grid-column:7/13;margin-top:clamp(40px,6vw,110px)}
 .g.solo-l{grid-column:2/7}.g.solo-r{grid-column:7/12}
 .ba{padding-bottom:clamp(72px,9vw,150px)}
@@ -462,3 +462,6 @@ html:not(.js) .seq-d,.seq.static .seq-d{max-height:none;opacity:1;margin-top:6px
 .cmp-r{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;pointer-events:none;-webkit-appearance:none;appearance:none}
 .cmp-r:focus-visible+*,.cmp:focus-within .cmp-knob{outline:2px solid var(--ink);outline-offset:2px}
 @media (max-width:900px){.ba-slide .cmp{grid-column:1/-1}}
+/* keep tall drawings (floor plans) within one screen height */
+.cmp{max-width:calc(88svh * var(--ar, 1.5))}
+.cmp.ink .cmp-line{background:var(--ink)}.cmp.ink .cmp-knob{box-shadow:0 0 0 1.5px var(--ink)}

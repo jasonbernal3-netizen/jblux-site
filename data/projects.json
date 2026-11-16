@@ -355,10 +355,20 @@
    },
    {
     "cap": "Structural diagram",
-    "kind": "drawing"
+    "kind": "drawing",
+    "full": true
    }
   ],
   "ba": [
+   {
+    "t": "Floor plan",
+    "b": "ba-purdue-avenue-03-b",
+    "a": "ba-purdue-avenue-03-a",
+    "slider": true,
+    "tb": "Demolition",
+    "ta": "New",
+    "drawing": true
+   },
    {
     "t": "Rear exterior"
    },

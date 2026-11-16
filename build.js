@@ -51,7 +51,8 @@ function urlFor(depth) {
 }
 function pic(u, name, sizes, alt, opts = {}) {
   const m = images[name]; if (!m) throw new Error('missing image ' + name);
-  const srcset = m.sizes.slice().sort((a, b) => a - b).map(w => `${u(`/img/${name}-${w}.webp`)} ${Math.min(w, m.w)}w`).join(', ');
+  const top = Math.max(...m.sizes); // size keys are the long edge; srcset needs real widths
+  const srcset = m.sizes.slice().sort((a, b) => a - b).map(w => `${u(`/img/${name}-${w}.webp`)} ${Math.round(m.w * w / top)}w`).join(', ');
   const big = Math.max(...m.sizes);
   return `<img src="${u(`/img/${name}-${big}.webp`)}"${m.sizes.length > 1 ? ` srcset="${srcset}" sizes="${sizes}"` : ''} alt="${esc(alt)}" width="${m.w}" height="${m.h}"${opts.eager ? ' fetchpriority="high"' : ' loading="lazy"'}>`;
 }
@@ -256,14 +257,15 @@ function gallery(u, p) {
   const out = []; let flip = false;
   for (let i = 0; i < items.length; i++) {
     const a = items[i], b = items[i + 1];
-    if (shape(a) === 'P' && b && shape(b) === 'P') { out.push([a, 'half-l'], [b, 'half-r']); i++; }
+    if (a.full) { out.push([a, 'full']); continue; }
+    if (shape(a) === 'P' && b && shape(b) === 'P' && !b.full) { out.push([a, 'half-l'], [b, 'half-r']); i++; }
     else if (shape(a) === 'P') { out.push([a, flip ? 'solo-r' : 'solo-l']); flip = !flip; }
     else { out.push([a, flip ? 'wide-r' : 'wide-l']); flip = !flip; }
   }
   return out.map(([it, cls], i) => {
     const m = images[it.name], big = Math.max(...m.sizes);
     return `<figure class="g ${cls}${it.kind === 'drawing' ? ' drawing' : ''}">
-      <button class="zoom" type="button" data-full="${u(`/img/${it.name}-${big}.webp`)}" data-cap="${esc(it.cap)}" aria-label="Enlarge: ${esc(it.cap)}">${pic(u, it.name, cls.startsWith('wide') ? '(max-width:900px) 100vw, 75vw' : '(max-width:900px) 100vw, 50vw', `${p.name}: ${it.cap.toLowerCase()}`)}</button>
+      <button class="zoom" type="button" data-full="${u(`/img/${it.name}-${big}.webp`)}" data-cap="${esc(it.cap)}" aria-label="Enlarge: ${esc(it.cap)}">${pic(u, it.name, cls === 'full' ? '100vw' : cls.startsWith('wide') ? '(max-width:900px) 100vw, 75vw' : '(max-width:900px) 100vw, 50vw', `${p.name}: ${it.cap.toLowerCase()}`)}</button>
       <figcaption class="label"><span>${esc(it.cap)}</span><span class="num">${String(i + 2).padStart(2, '0')}</span></figcaption>
     </figure>`;
   }).join('\n    ');
@@ -275,11 +277,11 @@ function beforeAfter(u, p) {
     const a = r.a || base + '-a', b = r.b || base + '-b';
     if (r.slider) return `<div class="ba-pair ba-slide">
       <span class="label">${esc(r.t)}<br><span class="ba-hint">Drag to compare</span></span>
-      <div class="cmp" style="--p:50%">
+      <div class="cmp${r.drawing ? ' ink' : ''}" style="--p:50%;--ar:${(images[a].w / images[a].h).toFixed(4)}">
         ${pic(u, a, '(max-width:900px) 100vw, 66vw', `${p.name}, ${r.t.toLowerCase()}: after`)}
         <div class="cmp-b" aria-hidden="true">${pic(u, b, '(max-width:900px) 100vw, 66vw', `${p.name}, ${r.t.toLowerCase()}: before`)}</div>
         <span class="cmp-line" aria-hidden="true"><span class="cmp-knob"></span></span>
-        <span class="cmp-tag cmp-tb label">Before</span><span class="cmp-tag cmp-ta label">After</span>
+        <span class="cmp-tag cmp-tb label">${esc(r.tb || 'Before')}</span><span class="cmp-tag cmp-ta label">${esc(r.ta || 'After')}</span>
         <input class="cmp-r" type="range" min="0" max="100" step="0.1" value="50" aria-label="${esc(r.t)}: slide between before and after">
       </div>
     </div>`;
