@@ -242,7 +242,11 @@ a.card:hover .frame img{transform:scale(1.025)}
 .proj-text{grid-column:4/10;font-size:clamp(1.25rem,1rem + .9vw,1.75rem);line-height:1.25;letter-spacing:-.01em}
 .proj-text{display:flex;flex-direction:column;gap:1em}
 .proj-text p{margin:0}
-.credits{grid-column:4/10;margin:clamp(28px,3vw,44px) 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px var(--gap)}
+.credits{grid-column:4/10;margin:clamp(28px,3vw,44px) 0 0;}
+
+.proj-body .credits{grid-column:4/10}
+.proj-body>.label+.credits{margin-top:0}
+.credits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px var(--gap)}
 .credits div{border-top:1px solid var(--ink);padding-top:10px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .credits dt{color:var(--mute)}
 .credits dd{margin:0}
@@ -338,7 +342,7 @@ a.card:hover .frame img{transform:scale(1.025)}
   .foot-info{grid-column:1/-1}
   .pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .proj-body .label,.proj-text,.credits{grid-column:1/-1}
+  .proj-body .label,.proj-text,.proj-body .credits{grid-column:1/-1}
   .proj-body .label{margin-bottom:16px}
   .g.wide-l,.g.wide-r,.g.solo-l,.g.solo-r{grid-column:1/-1}
   .ba-pair>.label{grid-column:1/-1;margin-bottom:14px}

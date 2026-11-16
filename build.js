@@ -298,9 +298,9 @@ ${topbar(u, '/projects/')}
     <button class="zoom" type="button" data-full="${u(`/img/p-${p.slug}-01-${Math.max(...images[`p-${p.slug}-01`].sizes)}.webp`)}" data-cap="${esc(lead.cap)}" aria-label="Enlarge: ${esc(lead.cap)}">${pic(u, `p-${p.slug}-01`, '100vw', `${p.name}: ${lead.cap.toLowerCase()}`, { eager: true })}</button>
     <figcaption class="label"><span>${esc(lead.cap)}</span><span class="num">01</span></figcaption>
   </figure>
-  ${p.summary ? `<section class="proj-body pad grid">
-    <span class="label">About the project</span>
-    <div class="proj-text">${[].concat(p.summary).map(t => `<p>${esc(t)}</p>`).join('')}</div>${p.credits ? `<dl class="credits label">${p.credits.map(c => `<div><dt>${esc(c.role)}</dt><dd>${esc(c.name)}</dd></div>`).join('')}</dl>` : ''}
+  ${p.summary || p.credits ? `<section class="proj-body pad grid">
+    <span class="label">${p.summary ? 'About the project' : 'Credits'}</span>
+    ${p.summary ? `<div class="proj-text">${[].concat(p.summary).map(t => `<p>${esc(t)}</p>`).join('')}</div>` : ''}${p.credits ? `<dl class="credits label">${p.credits.map(c => `<div><dt>${esc(c.role)}</dt><dd>${esc(c.name)}</dd></div>`).join('')}</dl>` : ''}
   </section>` : '<div class="proj-gap"></div>'}
   ${p.gallery.length > 1 ? `<section class="gallery pad" aria-label="Gallery">
     ${gallery(u, p)}
