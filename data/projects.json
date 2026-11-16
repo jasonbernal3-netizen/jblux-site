@@ -354,6 +354,11 @@
     "kind": "photo"
    },
    {
+    "cap": "Cutaway axonometric",
+    "kind": "drawing",
+    "full": true
+   },
+   {
     "cap": "Structural diagram",
     "kind": "drawing",
     "full": true
@@ -370,10 +375,23 @@
     "drawing": true
    },
    {
-    "t": "Rear exterior"
+    "t": "Rear axonometric",
+    "b": "ba-purdue-avenue-04-b",
+    "a": "ba-purdue-avenue-04-a",
+    "slider": true,
+    "drawing": true,
+    "tb": "Existing",
+    "ta": "New"
    },
    {
-    "t": "Mudroom"
+    "t": "Rear exterior",
+    "b": "ba-purdue-avenue-01-b",
+    "a": "ba-purdue-avenue-01-a"
+   },
+   {
+    "t": "Mudroom",
+    "b": "ba-purdue-avenue-02-b",
+    "a": "ba-purdue-avenue-02-a"
    }
   ],
   "scope": "Design, construction documents and millwork drawings",
