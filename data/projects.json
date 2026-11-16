@@ -51,7 +51,13 @@
     "name": "NTX Construction Solutions"
    }
   ],
-  "scope": "Design, permit set and construction documents"
+  "scope": "Design, permit set and construction documents",
+  "film": {
+   "src": "v-bonita-casita.mp4",
+   "poster": "v-bonita-casita-poster.webp",
+   "t": "Walkthrough",
+   "d": "Along the pool deck to the casita, then around to the spa and lounge deck."
+  }
  },
  {
   "slug": "courtshire",
