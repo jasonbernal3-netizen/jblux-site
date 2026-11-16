@@ -32,13 +32,21 @@ const LOGO = a => svg('JB-Lux-Designs-logo-black.svg', a);
 const MONO = a => svg('JB-Lux-Designs-monogram-black.svg', a);
 const MARK = a => svg('JB-Lux-Designs-favicon-JB-black.svg', a);
 /* urls: absolute on the live site; relative (with index.html) in the review preview */
+/* images are served with a one-year immutable cache, so every /img/ URL carries a short content hash:
+   replacing a photo under the same file name then changes its URL and browsers fetch the new one */
+const _vh = {};
+function ver(p) {
+  if (!/^\/img\/.+\.(webp|jpg|png|svg)$/.test(p)) return p;
+  if (!(p in _vh)) { try { _vh[p] = require('crypto').createHash('md5').update(require('fs').readFileSync(require('path').join(__dirname, 'static', p))).digest('hex').slice(0, 8); } catch (e) { _vh[p] = ''; } }
+  return _vh[p] ? p + '?v=' + _vh[p] : p;
+}
 function urlFor(depth) {
   return function (p) {
-    if (!PREVIEW) return p;
+    if (!PREVIEW) return ver(p);
     const [pathname, hash] = p.split('#');
     let rel = pathname.replace(/^\//, '');
     if (pathname.endsWith('/')) rel += 'index.html';
-    return '../'.repeat(depth) + rel + (hash ? '#' + hash : '');
+    return '../'.repeat(depth) + rel + (ver(pathname) !== pathname ? ver(pathname).slice(pathname.length) : '') + (hash ? '#' + hash : '');
   };
 }
 function pic(u, name, sizes, alt, opts = {}) {
@@ -312,7 +320,7 @@ ${topbar(u, '/projects/')}
     <span class="label">${p.summary ? 'About the project' : 'Credits'}</span>
     ${p.summary ? `<div class="proj-text">${[].concat(p.summary).map(t => `<p>${esc(t)}</p>`).join('')}</div>` : ''}${p.credits ? `<dl class="credits label">${p.credits.map(c => `<div><dt>${esc(c.role)}</dt><dd>${esc(c.name)}</dd></div>`).join('')}</dl>` : ''}
   </section>` : '<div class="proj-gap"></div>'}
-  ${p.sequence ? (s => `<section class="seq" id="seq" style="--steps:${s.steps.length}" data-base="${u('/img/' + s.dir + '/000.webp').replace(/000\.webp$/, '')}" data-frames="${s.frames}" data-steps="${s.steps.map(x => x.at).join(',')}" aria-label="${esc(s.title)}">
+  ${p.sequence ? (s => `<section class="seq" id="seq" style="--steps:${s.steps.length}" data-base="${u('/img/' + s.dir + '/000.webp').replace(/000\.webp(\?.*)?$/, '')}" data-frames="${s.frames}" data-steps="${s.steps.map(x => x.at).join(',')}" aria-label="${esc(s.title)}">
     <div class="seq-pin pad">
       <div class="seq-text">
         <span class="label mute">${esc(s.title)}</span>
