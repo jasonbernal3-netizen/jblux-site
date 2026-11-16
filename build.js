@@ -315,6 +315,11 @@ ${topbar(u, '/projects/')}
   ${p.gallery.length > 1 ? `<section class="gallery pad" aria-label="Gallery">
     ${gallery(u, p)}
   </section>` : ''}
+${p.details ? `
+  <section class="details pad" aria-labelledby="det-h">
+    <div class="ba-head ruled"><h2 id="det-h">Details</h2></div>
+    <div class="det-grid">${p.details.map((x, i) => { const n = 'd-' + p.slug + '-' + String(i + 1).padStart(2, '0'), m = images[n]; return `<figure class="g det reveal"><button class="zoom" type="button" data-full="${u('/img/' + n + '-' + Math.max(...m.sizes) + '.webp')}" data-cap="${esc(x.t)}" aria-label="Enlarge: ${esc(x.t)}">${pic(u, n, '(max-width:720px) 100vw, 50vw', p.name + ': ' + x.t.toLowerCase())}</button><figcaption class="label"><span>${esc(x.t)}</span><span class="num">D${i + 1}</span></figcaption><p class="det-d">${esc(x.d)}</p></figure>`; }).join('')}</div>
+  </section>` : ''}
 ${beforeAfter(u, p)}
   <a class="next pad" href="${u(`/projects/${next.slug}/`)}">
     <div class="ruled"><span><span class="label">Next project</span><span class="nm">${esc(next.name)}</span></span><span class="arr" aria-hidden="true">→</span></div>

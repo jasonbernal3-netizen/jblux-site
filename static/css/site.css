@@ -431,3 +431,10 @@ html:not(.js) .seq-d,.seq.static .seq-d{max-height:none;opacity:1;margin-top:6px
 }
 
 .proj-gap{height:clamp(44px,5.5vw,96px)}
+
+/* project details: close-ups paired side by side */
+.details{padding-bottom:clamp(72px,9vw,150px)}
+.det-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,5vw,72px) var(--gap)}
+.det-grid .det:nth-child(even){margin-top:clamp(40px,6vw,110px)}
+.det-d{margin:0;color:var(--mute);font-size:.9375rem;line-height:1.45;max-width:34em}
+@media (max-width:720px){.det-grid{grid-template-columns:1fr}.det-grid .det:nth-child(even){margin-top:0}}

@@ -147,7 +147,17 @@
      "d": "One continuous space, with light and sight lines from the front of the house to the back."
     }
    ]
-  }
+  },
+  "details": [
+   {
+    "t": "Lit step at the entry",
+    "d": "A curved, lit step resolves an existing change in level and marks the move from the living areas to the bedroom wing."
+   },
+   {
+    "t": "Custom sconce lighting",
+    "d": "Custom-made sconces set against the arched openings between the kitchen and the butler’s pantry."
+   }
+  ]
  },
  {
   "slug": "knockouts-hair-salon",
