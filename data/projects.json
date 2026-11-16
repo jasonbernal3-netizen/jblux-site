@@ -60,7 +60,7 @@
   },
   "sequence": {
    "dir": "seq/bonita-casita",
-   "frames": 68,
+   "frames": 79,
    "w": 900,
    "h": 1220,
    "title": "How the pass-through window opens",
@@ -73,17 +73,17 @@
      "d": "The window over the casita sink, closed, with the pool and main house beyond."
     },
     {
-     "at": 0.209,
+     "at": 0.237,
      "t": "Lower panel lifts",
      "d": "The bottom panel swings out and up on its hinges."
     },
     {
-     "at": 0.507,
+     "at": 0.506,
      "t": "Panels fold",
      "d": "Both panels fold together as they rise toward the head of the opening."
     },
     {
-     "at": 0.806,
+     "at": 0.776,
      "t": "Fully open",
      "d": "The window folds up out of the way, opening the kitchen to the pool deck."
     }
