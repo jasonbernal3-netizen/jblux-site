@@ -328,9 +328,9 @@
   "slug": "purdue-avenue",
   "name": "Purdue Avenue",
   "short": "Purdue Avenue",
-  "type": "Interior renovation",
+  "type": "Expansion and interior renovation",
   "cat": "res",
-  "location": "Dallas",
+  "location": "Preston Hollow, Dallas",
   "year": "2026",
   "gallery": [
    {
@@ -350,14 +350,6 @@
     "kind": "photo"
    },
    {
-    "cap": "Kitchen and living room",
-    "kind": "photo"
-   },
-   {
-    "cap": "Living room",
-    "kind": "photo"
-   },
-   {
     "cap": "Rear patio",
     "kind": "photo"
    },
@@ -372,6 +364,21 @@
    },
    {
     "t": "Mudroom"
+   }
+  ],
+  "scope": "Design, construction documents and millwork drawings",
+  "summary": [
+   "The family at this Preston Hollow home needed a larger living room and a better way into the house from the garage. Rather than build a full addition, the design enclosed the existing back porch, turning it into an extension of the living room and making space for a more functional kitchen.",
+   "A new mudroom connects the house to the existing garage, creating a seamless transition and a better arrival sequence into the home. Two new steel beams and several LVLs carry the existing second floor over the opened-up spaces below."
+  ],
+  "credits": [
+   {
+    "role": "Contractor",
+    "name": "NTX Construction Solutions"
+   },
+   {
+    "role": "Structural engineer",
+    "name": "LR Engineering"
    }
   ]
  },
