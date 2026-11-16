@@ -445,7 +445,7 @@ html:not(.js) .seq-d,.seq.static .seq-d{max-height:none;opacity:1;margin-top:6px
 .build-grid img{aspect-ratio:4/5;object-fit:cover;width:100%;height:auto}
 @media (max-width:720px){.build-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}}
 /* project: before/after drag slider */
-.ba-slide .cmp{grid-column:4/12}
+.ba-slide .cmp{grid-column:4/13}
 .ba-hint{color:var(--mute)}
 .cmp{position:relative;overflow:hidden;background:var(--pill);touch-action:pan-y;user-select:none}
 .cmp img{display:block;width:100%;height:auto;pointer-events:none}
