@@ -200,7 +200,15 @@
     "kind": "photo"
    },
    {
-    "cap": "Kitchen and living room",
+    "cap": "Kitchen and stair",
+    "kind": "photo"
+   },
+   {
+    "cap": "Kitchen, bar and stair",
+    "kind": "photo"
+   },
+   {
+    "cap": "Open plan from the second-floor landing",
     "kind": "photo"
    },
    {
@@ -208,11 +216,7 @@
     "kind": "photo"
    },
    {
-    "cap": "Second-floor landing",
-    "kind": "photo"
-   },
-   {
-    "cap": "Second-floor landing",
+    "cap": "Kitchen and living room",
     "kind": "photo"
    },
    {
@@ -225,6 +229,11 @@
     "t": "Street view",
     "b": "ba-mill-creek-01-b",
     "a": "ba-mill-creek-01-a"
+   },
+   {
+    "t": "Living room",
+    "b": "ba-mill-creek-02-b",
+    "a": "ba-mill-creek-02-a"
    }
   ],
   "credits": [
@@ -270,7 +279,25 @@
    "With a baby on the way, the owners of this 1965 house needed more room for a growing family. The solution was a new second story built above the existing home, adding two bedrooms, a bathroom and a playroom.",
    "Skylights and new windows bring natural light into the upper floor, with views over the backyard and the street. On the ground floor, the renovation opened up the plan, made the everyday spaces more functional and added a covered patio for entertaining."
   ],
-  "scope": "Design, permit set and construction documents"
+  "scope": "Design, permit set and construction documents",
+  "build": [
+   {
+    "img": "b-mill-creek-01",
+    "t": "Existing roof removed"
+   },
+   {
+    "img": "b-mill-creek-02",
+    "t": "Second story sheathed"
+   },
+   {
+    "img": "b-mill-creek-03",
+    "t": "Second floor framed, skylights in"
+   },
+   {
+    "img": "b-mill-creek-04",
+    "t": "Skylights at dusk"
+   }
+  ]
  },
  {
   "slug": "mckinney-patio-cover",
