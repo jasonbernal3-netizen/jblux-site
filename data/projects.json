@@ -350,10 +350,6 @@
     "kind": "photo"
    },
    {
-    "cap": "Rear patio",
-    "kind": "photo"
-   },
-   {
     "cap": "Cutaway axonometric",
     "kind": "drawing",
     "full": true
@@ -389,6 +385,11 @@
     "a": "ba-purdue-avenue-01-a"
    },
    {
+    "t": "Side patio",
+    "b": "ba-purdue-avenue-05-b",
+    "a": "ba-purdue-avenue-05-a"
+   },
+   {
     "t": "Mudroom",
     "b": "ba-purdue-avenue-02-b",
     "a": "ba-purdue-avenue-02-a"
@@ -421,6 +422,24 @@
     "kind": "drawing",
     "t": "Range wall and living room built-ins",
     "d": "The range wall wraps around the corner beside a tall built-in refrigerator. Across the room, built-in shelving and cabinets frame the fireplace in the living room."
+   }
+  ],
+  "build": [
+   {
+    "img": "b-purdue-avenue-01",
+    "t": "Porch enclosure sheathed"
+   },
+   {
+    "img": "b-purdue-avenue-02",
+    "t": "Steel beam at the mudroom connector"
+   },
+   {
+    "img": "b-purdue-avenue-03",
+    "t": "Mudroom connector framed"
+   },
+   {
+    "img": "b-purdue-avenue-04",
+    "t": "New steel beam over the living room"
    }
   ]
  },
