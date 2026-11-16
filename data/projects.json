@@ -247,8 +247,8 @@
   "short": "Grace Ranch",
   "type": "Guest house",
   "cat": "res",
-  "location": "",
-  "year": "",
+  "location": "McKinney",
+  "year": "2024",
   "gallery": [
    {
     "cap": "Site rendering",
@@ -278,8 +278,8 @@
   "short": "Lakeside Residence",
   "type": "New residence",
   "cat": "res",
-  "location": "",
-  "year": "",
+  "location": "Rockwall",
+  "year": "2026",
   "gallery": [
    {
     "cap": "Framing",
@@ -300,32 +300,13 @@
   ]
  },
  {
-  "slug": "prosper-garage-addition",
-  "name": "Prosper Garage Addition",
-  "short": "Prosper Garage",
-  "type": "Garage addition",
-  "cat": "res",
-  "location": "Prosper",
-  "year": "",
-  "gallery": [
-   {
-    "cap": "Rendering",
-    "kind": "photo"
-   },
-   {
-    "cap": "Rendering",
-    "kind": "photo"
-   }
-  ]
- },
- {
   "slug": "cherie-lane-boutique",
   "name": "Cherie Lane Boutique",
   "short": "Cherie Lane",
   "type": "Boutique",
   "cat": "com",
-  "location": "",
-  "year": "",
+  "location": "Plano",
+  "year": "2025",
   "soon": true
  },
  {
@@ -334,8 +315,8 @@
   "short": "Nuli Studios",
   "type": "Med spa",
   "cat": "com",
-  "location": "",
-  "year": "",
+  "location": "Various",
+  "year": "2026",
   "soon": true
  }
 ]
