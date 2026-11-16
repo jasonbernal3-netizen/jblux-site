@@ -300,7 +300,7 @@ ${topbar(u, '/projects/')}
   </figure>
   ${p.summary ? `<section class="proj-body pad grid">
     <span class="label">About the project</span>
-    <div class="proj-text"><p>${esc(p.summary)}</p></div>
+    <div class="proj-text">${[].concat(p.summary).map(t => `<p>${esc(t)}</p>`).join('')}</div>${p.credits ? `<dl class="credits label">${p.credits.map(c => `<div><dt>${esc(c.role)}</dt><dd>${esc(c.name)}</dd></div>`).join('')}</dl>` : ''}
   </section>` : '<div class="proj-gap"></div>'}
   ${p.gallery.length > 1 ? `<section class="gallery pad" aria-label="Gallery">
     ${gallery(u, p)}
