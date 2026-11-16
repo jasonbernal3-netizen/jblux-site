@@ -48,8 +48,8 @@ function pic(u, name, sizes, alt, opts = {}) {
   return `<img src="${u(`/img/${name}-${big}.webp`)}"${m.sizes.length > 1 ? ` srcset="${srcset}" sizes="${sizes}"` : ''} alt="${esc(alt)}" width="${m.w}" height="${m.h}"${opts.eager ? ' fetchpriority="high"' : ' loading="lazy"'}>`;
 }
 const arrow = '<span class="arr" aria-hidden="true">→</span>';
-const place = p => p.location || '[CITY]';
-const year = p => p.year || '[YEAR]';
+const place = p => p.location || '';
+const year = p => p.year || '';
 
 /* ── shared chrome ── */
 function chrome(u, here) {
@@ -68,8 +68,8 @@ function chrome(u, here) {
     <div class="menu-side">
       <span class="label">Info</span>
       <span>${site.email}<br>${site.city}</span>
-      <span class="label">Follow</span>
-      <span>${site.instagram || '[INSTAGRAM]'}</span>
+      ${site.instagram ? `<span class="label">Follow</span>
+      <span>${site.instagram}</span>` : ''}
     </div>
     <div class="menu-foot label"><span>© ${new Date().getFullYear()} ${site.legal}</span><span>${site.city}</span></div>
   </div>
@@ -107,9 +107,9 @@ function footer(u) {
     </div>
     <div class="foot-info">
       <span class="label mute">Info</span>
-      <dl><dt>E:</dt><dd>${site.email}</dd><dt>L:</dt><dd>${site.city}</dd><dt>P:</dt><dd class="mute">${site.phone || '[PHONE, optional]'}</dd></dl>
-      <span class="label mute" style="margin-top:20px">Follow</span>
-      <span class="mute">${site.instagram || '[INSTAGRAM]'}</span>
+      <dl><dt>E:</dt><dd>${site.email}</dd><dt>L:</dt><dd>${site.city}</dd>${site.phone ? `<dt>P:</dt><dd>${site.phone}</dd>` : ''}</dl>
+      ${site.instagram ? `<span class="label mute" style="margin-top:20px">Follow</span>
+      <span>${site.instagram}</span>` : ''}
     </div>
     <div class="foot-base label">
       <span>© ${new Date().getFullYear()} ${site.legal}</span>
@@ -133,7 +133,7 @@ function home(u) {
     const [img, cls] = homeImg[p.slug] || ['c-' + p.slug, ''];
     return `<a class="card${cls} reveal" href="${u(`/projects/${p.slug}/`)}">
           <div class="frame">${pic(u, img, '(max-width:720px) 80vw, 50vw', `${p.name}, ${p.type.toLowerCase()}`)}</div>
-          <div class="cap label"><span class="num">0${i + 1}</span><span>${esc(p.name)}</span><span class="num">${year(p)}</span><span class="t2">${esc(p.type)}, ${esc(place(p))}</span></div>
+          <div class="cap label"><span class="num">0${i + 1}</span><span>${esc(p.name)}</span><span class="num">${year(p)}</span><span class="t2">${esc(p.type)}${p.location ? ', ' + esc(p.location) : ''}</span></div>
         </a>`;
   };
   const left = f.filter((_, i) => i % 2 === 0), right = f.filter((_, i) => i % 2 === 1);
@@ -289,19 +289,19 @@ ${topbar(u, '/projects/')}
     <h1 class="proj-title ruled rise"><span class="mask"><span>${esc(p.name)}</span></span></h1>
     <dl class="facts label">
       <div><dt>Type</dt><dd>${esc(p.type)}</dd></div>
-      <div><dt>Location</dt><dd>${esc(place(p))}</dd></div>
-      <div><dt>Year</dt><dd class="num">${year(p)}</dd></div>
-      <div><dt>Scope</dt><dd>${esc(p.scope || '[SCOPE OF SERVICES]')}</dd></div>
+      ${p.location ? `<div><dt>Location</dt><dd>${esc(p.location)}</dd></div>` : ''}
+      ${p.year ? `<div><dt>Year</dt><dd class="num">${p.year}</dd></div>` : ''}
+      ${p.scope ? `<div><dt>Scope</dt><dd>${esc(p.scope)}</dd></div>` : ''}
     </dl>
   </section>
   <figure class="proj-lead pad g${lead.kind === 'drawing' ? ' drawing' : ''}">
     <button class="zoom" type="button" data-full="${u(`/img/p-${p.slug}-01-${Math.max(...images[`p-${p.slug}-01`].sizes)}.webp`)}" data-cap="${esc(lead.cap)}" aria-label="Enlarge: ${esc(lead.cap)}">${pic(u, `p-${p.slug}-01`, '100vw', `${p.name}: ${lead.cap.toLowerCase()}`, { eager: true })}</button>
     <figcaption class="label"><span>${esc(lead.cap)}</span><span class="num">01</span></figcaption>
   </figure>
-  <section class="proj-body pad grid">
+  ${p.summary ? `<section class="proj-body pad grid">
     <span class="label">About the project</span>
-    <div class="proj-text"><p>${p.summary ? esc(p.summary) : '<span class="ph">[PROJECT DESCRIPTION: two or three sentences on the brief, what was designed and the result.]</span>'}</p></div>
-  </section>
+    <div class="proj-text"><p>${esc(p.summary)}</p></div>
+  </section>` : '<div class="proj-gap"></div>'}
   ${p.gallery.length > 1 ? `<section class="gallery pad" aria-label="Gallery">
     ${gallery(u, p)}
   </section>` : ''}
@@ -321,7 +321,7 @@ ${footer(u)}`;
 function aboutPage(u) {
   const rows = site.services.map((s, i) => {
     const ex = s.examples.map(x => bySlug[x]);
-    return `<li><span class="n num">0${i + 1}</span><span class="nm">${esc(s.name)}</span><span class="eg">${ex.length ? ex.map(p => `<a class="ulink" href="${u(`/projects/${p.slug}/`)}">${esc(p.short)}</a>`).join(', ') : '<span class="ph">[EXAMPLE PROJECT]</span>'}</span></li>`;
+    return `<li><span class="n num">0${i + 1}</span><span class="nm">${esc(s.name)}</span><span class="eg">${ex.length ? ex.map(p => `<a class="ulink" href="${u(`/projects/${p.slug}/`)}">${esc(p.short)}</a>`).join(', ') : ''}</span></li>`;
   }).join('\n      ');
   return `
 ${chrome(u, '/about/')}
@@ -368,8 +368,8 @@ ${topbar(u, '/contact/')}
     <div class="c-info">
       <div><span class="label">Email</span><span class="big"><span id="email-c">${site.email}</span> <button class="copy label" data-target="email-c" type="button">Copy</button></span></div>
       <div><span class="label">Studio</span><span>${site.legal}<br>${site.city}</span></div>
-      <div><span class="label">Phone</span><span class="mute">${site.phone || '[PHONE, optional]'}</span></div>
-      <div><span class="label">Follow</span><span class="mute">${site.instagram || '[INSTAGRAM]'}</span></div>
+      ${site.phone ? `<div><span class="label">Phone</span><span>${site.phone}</span></div>` : ''}
+      ${site.instagram ? `<div><span class="label">Follow</span><span>${site.instagram}</span></div>` : ''}
     </div>
     <form class="form" id="contact-form" name="contact" method="POST" action="${u('/contact/thanks/')}" data-netlify="true" netlify-honeypot="bot-field"${PREVIEW ? ` data-preview="1" data-to="${site.email}"` : ''}>
       <input type="hidden" name="form-name" value="contact">

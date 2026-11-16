@@ -387,3 +387,5 @@ a.card:hover .frame img{transform:scale(1.025)}
   html.js .rise:not(.in) .mask>span,html.js .reveal:not(.in) .frame img{transform:none}
   html.js .reveal:not(.in) .frame::after{opacity:0}
 }
+
+.proj-gap{height:clamp(44px,5.5vw,96px)}
