@@ -221,7 +221,13 @@
     "img": "b-courtshire-04",
     "t": "Kitchen peninsula plumbed and boarded"
    }
-  ]
+  ],
+  "film": {
+   "src": "v-courtshire.mp4",
+   "poster": "v-courtshire-poster.webp",
+   "t": "Walkthrough",
+   "d": "From the quartzite range hood, across the island, to the open living and dining room."
+  }
  },
  {
   "slug": "knockouts-hair-salon",
