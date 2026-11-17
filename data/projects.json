@@ -203,6 +203,24 @@
     "t": "Custom sconce lighting",
     "d": "Custom-made sconces set against the arched openings between the kitchen and the butler’s pantry."
    }
+  ],
+  "build": [
+   {
+    "img": "b-courtshire-01",
+    "t": "Walls removed, first LVL beam in"
+   },
+   {
+    "img": "b-courtshire-02",
+    "t": "New posts and LVL header framed"
+   },
+   {
+    "img": "b-courtshire-03",
+    "t": "Drywall up at the new arched openings"
+   },
+   {
+    "img": "b-courtshire-04",
+    "t": "Kitchen peninsula plumbed and boarded"
+   }
   ]
  },
  {
