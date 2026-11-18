@@ -742,6 +742,16 @@
    {
     "cap": "Interior rendering",
     "kind": "photo"
+   },
+   {
+    "cap": "Axonometric of the suite",
+    "kind": "drawing",
+    "full": true
+   },
+   {
+    "cap": "Axonometric of the suite, opposite corner",
+    "kind": "drawing",
+    "full": true
    }
   ]
  },
