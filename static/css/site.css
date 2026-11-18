@@ -174,7 +174,7 @@ a.card:hover .frame img{transform:scale(1.025)}
 .svc-row::before,.svc-row::after{content:"";position:absolute;left:12%;right:12%;height:1px;background:var(--white);opacity:0;transition:opacity .4s ease}
 .svc-row::before{top:0}.svc-row::after{bottom:0}
 .svc-row.on::before,.svc-row.on::after{opacity:.35}
-.svc-name{grid-column:2;font-size:clamp(2.4rem,.9rem + 4.6vw,6rem);font-weight:300;letter-spacing:-.035em;line-height:1.08;text-align:center;opacity:.3;transition:opacity .45s ease;white-space:nowrap}
+.svc-name{grid-column:2;font-size:clamp(2.4rem,.9rem + 4.6vw,6rem);font-weight:300;letter-spacing:-.035em;line-height:1.08;text-align:center;opacity:.55;transition:opacity .45s ease;white-space:nowrap}
 .svc-name sup{font-size:.8rem;font-weight:500;letter-spacing:.06em;margin-left:.35em;vertical-align:top;position:relative;top:.9em}
 .svc-row.on .svc-name{opacity:1}
 .svc-thumbs{grid-column:1;justify-self:end;display:flex;gap:6px;opacity:0;transform:translateX(-12px);transition:opacity .45s ease,transform .6s var(--ease-out)}
@@ -405,7 +405,7 @@ html:not(.js) .seq-d,.seq.static .seq-d{max-height:none;opacity:1;margin-top:6px
   .wcol .card:nth-child(even){align-self:flex-end}
   .svc-row{grid-template-columns:1fr;row-gap:6px;padding-block:6px}
   .svc-row::before,.svc-row::after{left:0;right:0}
-  .svc-name{grid-column:1;white-space:normal;font-size:clamp(2.1rem,9vw,3rem)}
+  .svc-name{grid-column:1;white-space:normal;font-size:clamp(2.1rem,9vw,3rem);opacity:.75}
   .svc-thumbs,.svc-go{display:none}
   .foot-art{grid-column:1/-1}
   .foot-art svg{width:72px}
