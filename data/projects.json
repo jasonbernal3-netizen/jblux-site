@@ -439,6 +439,26 @@
     "img": "p-purdue-avenue-08"
    },
    {
+    "cap": "Mudroom",
+    "kind": "photo",
+    "img": "p-purdue-avenue-11"
+   },
+   {
+    "cap": "Living room toward the kitchen",
+    "kind": "photo",
+    "img": "p-purdue-avenue-12"
+   },
+   {
+    "cap": "Living room built-ins",
+    "kind": "photo",
+    "img": "p-purdue-avenue-09"
+   },
+   {
+    "cap": "Side patio",
+    "kind": "photo",
+    "img": "p-purdue-avenue-10"
+   },
+   {
     "cap": "Cutaway axonometric",
     "kind": "drawing",
     "full": true,
