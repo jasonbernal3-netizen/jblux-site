@@ -419,7 +419,7 @@
   "type": "Patio cover addition",
   "cat": "res",
   "location": "Celina",
-  "year": "",
+  "year": "2026",
   "gallery": [
    {
     "cap": "Patio cover from the backyard",
@@ -434,6 +434,13 @@
    {
     "t": "Backyard",
     "even": true
+   }
+  ],
+  "scope": "Design, permit set and construction documents",
+  "credits": [
+   {
+    "role": "Structural engineer",
+    "name": "RCS Enterprises"
    }
   ]
  },
