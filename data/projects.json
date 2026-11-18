@@ -588,7 +588,7 @@
   "slug": "winton-street",
   "name": "Winton Street",
   "short": "Winton Street",
-  "type": "Residential",
+  "type": "Second-story addition",
   "cat": "res",
   "location": "Dallas",
   "year": "2026",
@@ -618,7 +618,25 @@
     "la": "Under construction"
    }
   ],
-  "baTitle": "Existing and under construction"
+  "baTitle": "Existing and under construction",
+  "summary": [
+   "This Dallas home needed more space without giving up any of the yard. The answer was to build up: a new second story set over the existing garage.",
+   "The existing covered patio between the house and the garage was enclosed and turned into the new stair hall, connecting the original ground floor to the rooms above. Space that sat mostly unused now does the work of joining old and new."
+  ],
+  "credits": [
+   {
+    "role": "Contractor",
+    "name": "NTX Construction Solutions"
+   },
+   {
+    "role": "Structural engineer",
+    "name": "RCS Enterprises"
+   },
+   {
+    "role": "Interior design",
+    "name": "Rising Opal"
+   }
+  ]
  },
  {
   "slug": "mias-hair-salon",
