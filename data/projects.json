@@ -370,106 +370,6 @@
   }
  },
  {
-  "slug": "mckinney-patio-cover",
-  "name": "McKinney Patio Cover",
-  "short": "McKinney Patio Cover",
-  "type": "Patio cover",
-  "cat": "res",
-  "location": "McKinney",
-  "year": "2026",
-  "gallery": [
-   {
-    "cap": "Patio cover, rendering",
-    "kind": "photo"
-   }
-  ],
-  "ba": [
-   {
-    "t": "Patio",
-    "a": "p-mckinney-patio-cover-01",
-    "b": "ba-mckinney-patio-cover-01-b",
-    "la": "Proposed",
-    "lb": "Existing"
-   }
-  ]
- },
- {
-  "slug": "clayton-lane",
-  "name": "Clayton Lane",
-  "short": "Clayton Lane",
-  "type": "Patio cover addition",
-  "cat": "res",
-  "location": "Celina",
-  "year": "2026",
-  "gallery": [
-   {
-    "cap": "Patio cover from the backyard",
-    "kind": "photo"
-   },
-   {
-    "cap": "Under the patio cover",
-    "kind": "photo"
-   }
-  ],
-  "ba": [
-   {
-    "t": "Backyard",
-    "even": true
-   }
-  ],
-  "scope": "Design, permit set and construction documents",
-  "credits": [
-   {
-    "role": "Structural engineer",
-    "name": "RCS Enterprises"
-   }
-  ]
- },
- {
-  "slug": "cloud-view-court",
-  "name": "Cloud View Court",
-  "short": "Cloud View Court",
-  "type": "Kitchen renovation",
-  "cat": "res",
-  "location": "Prosper",
-  "year": "2026",
-  "scope": "Millwork drawings",
-  "gallery": [
-   {
-    "cap": "Axonometric of the new kitchen",
-    "kind": "drawing"
-   },
-   {
-    "cap": "Kitchen and fireplace wall from the living room",
-    "kind": "drawing"
-   },
-   {
-    "cap": "Axonometric with the ceiling beams",
-    "kind": "drawing"
-   }
-  ],
-  "credits": [
-   {
-    "role": "Contractor",
-    "name": "NTX Construction Solutions"
-   }
-  ],
-  "build": [
-   {
-    "img": "b-cloud-view-court-01",
-    "t": "Kitchen with the hood duct roughed in"
-   },
-   {
-    "img": "b-cloud-view-court-02",
-    "t": "Range alcove, drywall finished"
-   },
-   {
-    "img": "b-cloud-view-court-03",
-    "t": "Fireplace niches ready for built-ins"
-   }
-  ]
- },
- {
   "slug": "purdue-avenue",
   "name": "Purdue Avenue",
   "short": "Purdue Avenue",
@@ -706,6 +606,106 @@
    }
   ],
   "scope": "Design, permit set and construction documents"
+ },
+ {
+  "slug": "mckinney-patio-cover",
+  "name": "McKinney Patio Cover",
+  "short": "McKinney Patio Cover",
+  "type": "Patio cover",
+  "cat": "res",
+  "location": "McKinney",
+  "year": "2026",
+  "gallery": [
+   {
+    "cap": "Patio cover, rendering",
+    "kind": "photo"
+   }
+  ],
+  "ba": [
+   {
+    "t": "Patio",
+    "a": "p-mckinney-patio-cover-01",
+    "b": "ba-mckinney-patio-cover-01-b",
+    "la": "Proposed",
+    "lb": "Existing"
+   }
+  ]
+ },
+ {
+  "slug": "clayton-lane",
+  "name": "Clayton Lane",
+  "short": "Clayton Lane",
+  "type": "Patio cover addition",
+  "cat": "res",
+  "location": "Celina",
+  "year": "2026",
+  "gallery": [
+   {
+    "cap": "Patio cover from the backyard",
+    "kind": "photo"
+   },
+   {
+    "cap": "Under the patio cover",
+    "kind": "photo"
+   }
+  ],
+  "ba": [
+   {
+    "t": "Backyard",
+    "even": true
+   }
+  ],
+  "scope": "Design, permit set and construction documents",
+  "credits": [
+   {
+    "role": "Structural engineer",
+    "name": "RCS Enterprises"
+   }
+  ]
+ },
+ {
+  "slug": "cloud-view-court",
+  "name": "Cloud View Court",
+  "short": "Cloud View Court",
+  "type": "Kitchen renovation",
+  "cat": "res",
+  "location": "Prosper",
+  "year": "2026",
+  "scope": "Millwork drawings",
+  "gallery": [
+   {
+    "cap": "Axonometric of the new kitchen",
+    "kind": "drawing"
+   },
+   {
+    "cap": "Kitchen and fireplace wall from the living room",
+    "kind": "drawing"
+   },
+   {
+    "cap": "Axonometric with the ceiling beams",
+    "kind": "drawing"
+   }
+  ],
+  "credits": [
+   {
+    "role": "Contractor",
+    "name": "NTX Construction Solutions"
+   }
+  ],
+  "build": [
+   {
+    "img": "b-cloud-view-court-01",
+    "t": "Kitchen with the hood duct roughed in"
+   },
+   {
+    "img": "b-cloud-view-court-02",
+    "t": "Range alcove, drywall finished"
+   },
+   {
+    "img": "b-cloud-view-court-03",
+    "t": "Fireplace niches ready for built-ins"
+   }
+  ]
  },
  {
   "slug": "knockouts-hair-salon",
