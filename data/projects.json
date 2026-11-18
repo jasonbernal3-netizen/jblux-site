@@ -595,19 +595,29 @@
   "gallery": [
    {
     "cap": "Exterior rendering",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-winton-street-01"
    },
    {
     "cap": "Stair hall rendering",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-winton-street-02"
    },
    {
     "cap": "Axonometric of the addition",
-    "kind": "drawing"
+    "kind": "drawing",
+    "img": "p-winton-street-03",
+    "full": true
+   },
+   {
+    "cap": "Cutaway of the new second floor and stair",
+    "kind": "drawing",
+    "img": "p-winton-street-05"
    },
    {
     "cap": "Existing side yard",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-winton-street-04"
    }
   ],
   "ba": [
