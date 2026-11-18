@@ -117,7 +117,7 @@
         lis.forEach(function (li, i) { li.classList.toggle('on', i === a); });
         if (fill) fill.style.width = (p * 100).toFixed(1) + '%';
       };
-      var near = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { load(); near.disconnect(); } }, { rootMargin: '150% 0px' });
+      var near = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { load(); near.disconnect(); } }, { rootMargin: '300% 0px' });
       near.observe(seq);
       addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
       addEventListener('resize', update); update();

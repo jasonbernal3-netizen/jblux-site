@@ -270,14 +270,14 @@ function gallery(u, p) {
 // partner logos shown in place of the name in project credits (keyed by the credit name)
 const LOGOS = { 'NTX Construction Solutions': { f: 'logo-ntx.webp', w: images['logo-ntx'].w, h: images['logo-ntx'].h } };
 function seqHtml(u, s) {
-  return `<section class="seq" id="seq" style="--steps:${s.steps.length}" data-base="${u('/img/' + s.dir + '/000.webp').replace(/000\.webp(\?.*)?$/, '')}" data-frames="${s.frames}" data-steps="${s.steps.map(x => x.at).join(',')}" aria-label="${esc(s.title)}">
+  return `<section class="seq" id="seq" style="${s.lift ? `--lift:${s.lift}vh;` : ''}--steps:${s.steps.length}" data-base="${u('/img/' + s.dir + '/000.webp').replace(/000\.webp(\?.*)?$/, '')}" data-frames="${s.frames}" data-steps="${s.steps.map(x => x.at).join(',')}" aria-label="${esc(s.title)}">
     <div class="seq-pin pad">
       <div class="seq-text">
         <span class="label mute">${esc(s.title)}</span>
         <ol class="seq-steps">${s.steps.map((x, i) => `<li${i ? '' : ' class="on"'}><span class="label num">0${i + 1}</span><span class="seq-t">${esc(x.t)}</span><span class="seq-d">${esc(x.d)}</span></li>`).join('')}</ol>
         <div class="seq-bar" aria-hidden="true"><span id="seq-fill"></span></div>
       </div>
-      <div class="seq-stage"><canvas id="seq-canvas" width="${s.w}" height="${s.h}" role="img" aria-label="${esc(s.label || 'Animated axonometric')}: ${esc(s.steps.map(x => x.t).join(', '))}"></canvas><img id="seq-still" src="${u('/img/' + s.dir + '/' + String(s.frames - 1).padStart(3, '0') + '.webp')}" alt="${esc(s.alt || 'Axonometric of the completed plan')}" width="${s.w}" height="${s.h}" loading="lazy"></div>
+      <div class="seq-stage"><img class="seq-poster" src="${u('/img/' + s.dir + '/000.webp')}" alt="" aria-hidden="true" width="${s.w}" height="${s.h}" fetchpriority="high"><canvas id="seq-canvas" width="${s.w}" height="${s.h}" role="img" aria-label="${esc(s.label || 'Animated axonometric')}: ${esc(s.steps.map(x => x.t).join(', '))}"></canvas><img id="seq-still" src="${u('/img/' + s.dir + '/' + String(s.frames - 1).padStart(3, '0') + '.webp')}" alt="${esc(s.alt || 'Axonometric of the completed plan')}" width="${s.w}" height="${s.h}" loading="lazy"></div>
     </div>
   </section>`;
 }
