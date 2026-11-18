@@ -389,11 +389,11 @@ ${topbar(u, '/about/')}
     </div>
     <dl class="about-facts label">
       <div><dt>Founded</dt><dd class="num">${site.founded}</dd></div>
-      <div><dt>Principal</dt><dd>${site.principal}</dd></div>
+      <div><dt>Founder</dt><dd>${site.principal}</dd></div>
       <div><dt>Based in</dt><dd>${site.city}</dd></div>
       <div><dt>Working across</dt><dd>Dallas–Fort Worth</dd></div>
     </dl>
-    <figure class="portrait">${pic(u, 'portrait', '(max-width:900px) 420px, 33vw', 'Jason Bernal, founder and principal of JB Lux Designs')}<figcaption class="label"><span>${site.principal}</span><span>Founder &amp; Principal</span></figcaption></figure>
+    <figure class="portrait">${pic(u, 'portrait', '(max-width:900px) 420px, 33vw', 'Jason Bernal, founder of JB Lux Designs')}<figcaption class="label"><span>${site.principal}</span><span>Founder</span></figcaption></figure>
   </section>
   <section class="slist pad" id="services" aria-labelledby="sl-h">
     <div class="head-row ruled"><h2 class="mega rise" id="sl-h"><span class="mask"><span>Services</span></span></h2><span class="count label">Residential · Light commercial</span></div>
