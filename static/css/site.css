@@ -193,10 +193,8 @@ a.card:hover .frame img{transform:scale(1.025)}
 /* ── footer ── */
 .foot{border-top:1px solid var(--rule);padding-block:clamp(20px,2vw,28px) calc(clamp(20px,2vw,28px) + env(safe-area-inset-bottom,0px))}
 .foot-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);row-gap:40px}
-.foot-art{grid-column:1/4;display:flex;flex-direction:column;gap:clamp(16px,2vw,28px)}
-.foot-art .frame{aspect-ratio:4/5}
-.foot-art .frame img{height:100%;object-fit:cover;object-position:50% 25%}
-.foot-art svg{width:100%;height:auto}
+.foot-art{grid-column:1/4;display:flex;align-items:flex-start}
+.foot-art svg{width:clamp(72px,8vw,120px);height:auto}
 .foot-nav{grid-column:5/8;display:flex;flex-direction:column;gap:14px}
 .foot-nav nav{display:flex;flex-direction:column}
 .foot-nav nav a{font-size:clamp(1.9rem,1rem + 2vw,3rem);font-weight:500;letter-spacing:-.035em;line-height:1.05}
@@ -407,9 +405,8 @@ html:not(.js) .seq-d,.seq.static .seq-d{max-height:none;opacity:1;margin-top:6px
   .svc-row::before,.svc-row::after{left:0;right:0}
   .svc-name{grid-column:1;white-space:normal;font-size:clamp(2.1rem,9vw,3rem)}
   .svc-thumbs,.svc-go{display:none}
-  .foot-art{grid-column:1/-1;flex-direction:row;align-items:flex-end}
-  .foot-art .frame{width:52%}
-  .foot-art svg{width:30%}
+  .foot-art{grid-column:1/-1}
+  .foot-art svg{width:72px}
   .foot-nav{grid-column:1/-1}
   .foot-base{grid-template-columns:1fr}
   .foot-base>*:nth-child(2),.foot-base>*:last-child{justify-self:start}

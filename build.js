@@ -107,7 +107,6 @@ function footer(u) {
 <footer class="foot pad">
   <div class="foot-grid">
     <div class="foot-art">
-      <div class="frame reveal">${pic(u, 'f-stair', '(max-width:720px) 50vw, 25vw', '')}</div>
       ${MARK()}
     </div>
     <div class="foot-nav">
