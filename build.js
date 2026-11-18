@@ -191,7 +191,7 @@ ${chrome(u, '/')}
       </div>
       <span class="studio-tag label">Our studio</span>
       <div class="studio-copy">
-        <p>Jason Bernal founded JB Lux Designs in ${site.founded} after years of healthcare, commercial and residential work. The studio prepares permit sets, renovations, additions, millwork and patio covers for homeowners and contractors, and sees each project through permit approval.</p>
+        <p>Jason Bernal founded JB Lux Designs in ${site.founded} after years of healthcare, commercial and residential work. The studio prepares permit sets, renovations, additions, millwork and patio covers for homeowners and contractors, and stays involved from the first site visit through construction.</p>
         <a class="pill pill-ink label" href="${u('/about/')}">About the studio ${arrow}</a>
       </div>
     </div>
@@ -383,7 +383,7 @@ ${topbar(u, '/about/')}
     <p class="state">Jason Bernal founded JB Lux Designs in ${site.founded}, bringing a background in healthcare, commercial and residential architecture to homes and small businesses across Dallas–Fort Worth.</p>
     <div class="about-text">
       <p>That background ranges from managing design coordination on multi-phase healthcare projects to preparing the documents clients need for permit approval.</p>
-      <p>The studio works directly with homeowners and with contractors. Each project starts from field measurements of the existing building and a check of the local code, then is modeled in 3D so you can see the design in drawings and renderings before it goes to permit. The result is a clear, complete drawing set that a contractor can price and build from.</p>
+      <p>The studio works directly with homeowners and with contractors. Each project starts from field measurements of the existing building and a check of the local code, then is modeled in 3D so you can see the design in drawings and renderings before it goes to permit. The result is a clear, complete drawing set that a contractor can price and build from, and the studio stays on call through construction to answer questions and keep the build true to the drawings.</p>
     </div>
     <dl class="about-facts label">
       <div><dt>Founded</dt><dd class="num">${site.founded}</dd></div>
