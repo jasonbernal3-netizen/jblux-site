@@ -102,43 +102,60 @@
   "gallery": [
    {
     "cap": "Living and dining",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-courtshire-01"
    },
    {
     "cap": "Dining room",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-courtshire-02",
+    "skip": true
+   },
+   {
+    "cap": "Kitchen and island",
+    "kind": "photo",
+    "img": "p-courtshire-06"
    },
    {
     "cap": "Butler’s pantry",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-courtshire-03"
    },
    {
     "cap": "Kitchen range wall and breakfast nook",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-courtshire-04"
    },
    {
     "cap": "Cutaway axonometric of the new plan",
-    "kind": "drawing"
+    "kind": "drawing",
+    "img": "p-courtshire-05"
    }
   ],
   "ba": [
    {
-    "t": "Entry and dining"
+    "t": "Entry and dining",
+    "even": true
    },
    {
-    "t": "Living and kitchen"
+    "t": "Living and kitchen",
+    "even": true
    },
    {
-    "t": "Kitchen"
+    "t": "Kitchen",
+    "even": true
    },
    {
-    "t": "Kitchen, toward the living room"
+    "t": "Kitchen, toward the living room",
+    "even": true
    },
    {
-    "t": "Bedroom"
+    "t": "Bedroom",
+    "even": true
    },
    {
-    "t": "Living room"
+    "t": "Living room",
+    "even": true
    }
   ],
   "scope": "Interior space planning, structural coordination, construction documents and millwork drawings",
