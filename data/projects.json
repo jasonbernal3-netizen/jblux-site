@@ -732,8 +732,8 @@
  },
  {
   "slug": "cherie-lane-boutique",
-  "name": "Cherie Lane Boutique",
-  "short": "Cherie Lane",
+  "name": "Chérie Lane Boutique",
+  "short": "Chérie Lane",
   "type": "Boutique",
   "cat": "com",
   "location": "Plano",
@@ -752,6 +752,16 @@
     "cap": "Axonometric of the suite, opposite corner",
     "kind": "drawing",
     "full": true
+   }
+  ],
+  "scope": "Permit set and construction documents",
+  "summary": [
+   "An interior finish-out of a Plano lease space for Chérie Lane, a clothing boutique. The client needed the suite planned around how a boutique works day to day: an open display floor at the storefront, dressing rooms toward the back, and storage to keep stock out of sight."
+  ],
+  "credits": [
+   {
+    "role": "Contractor",
+    "name": "NTX Construction Solutions"
    }
   ]
  },
