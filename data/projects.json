@@ -445,6 +445,36 @@
   ]
  },
  {
+  "slug": "cloud-view-court",
+  "name": "Cloud View Court",
+  "short": "Cloud View Court",
+  "type": "Kitchen renovation",
+  "cat": "res",
+  "location": "",
+  "year": "2026",
+  "scope": "Millwork drawings",
+  "gallery": [
+   {
+    "cap": "Axonometric of the new kitchen",
+    "kind": "drawing"
+   },
+   {
+    "cap": "Kitchen and fireplace wall from the living room",
+    "kind": "drawing"
+   },
+   {
+    "cap": "Axonometric with the ceiling beams",
+    "kind": "drawing"
+   }
+  ],
+  "credits": [
+   {
+    "role": "Contractor",
+    "name": "NTX Construction Solutions"
+   }
+  ]
+ },
+ {
   "slug": "purdue-avenue",
   "name": "Purdue Avenue",
   "short": "Purdue Avenue",
