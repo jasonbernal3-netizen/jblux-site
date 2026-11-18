@@ -249,25 +249,6 @@
   }
  },
  {
-  "slug": "knockouts-hair-salon",
-  "name": "Knockouts Hair Salon",
-  "short": "Knockouts",
-  "type": "Commercial interior",
-  "cat": "com",
-  "location": "Various",
-  "year": "2025",
-  "gallery": [
-   {
-    "cap": "Reception, rendering",
-    "kind": "photo"
-   },
-   {
-    "cap": "Floor plan",
-    "kind": "drawing"
-   }
-  ]
- },
- {
   "slug": "mill-creek",
   "name": "Mill Creek",
   "short": "Mill Creek",
@@ -711,6 +692,25 @@
    }
   ],
   "scope": "Design, permit set and construction documents"
+ },
+ {
+  "slug": "knockouts-hair-salon",
+  "name": "Knockouts Hair Salon",
+  "short": "Knockouts",
+  "type": "Commercial interior",
+  "cat": "com",
+  "location": "Various",
+  "year": "2025",
+  "gallery": [
+   {
+    "cap": "Reception, rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Floor plan",
+    "kind": "drawing"
+   }
+  ]
  },
  {
   "slug": "mias-hair-salon",
