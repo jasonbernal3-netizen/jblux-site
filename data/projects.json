@@ -738,7 +738,12 @@
   "cat": "com",
   "location": "Plano",
   "year": "2025",
-  "soon": true
+  "gallery": [
+   {
+    "cap": "Interior rendering",
+    "kind": "photo"
+   }
+  ]
  },
  {
   "slug": "nuli-studios-med-spa",
