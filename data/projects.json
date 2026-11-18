@@ -748,6 +748,30 @@
   "cat": "com",
   "location": "Various",
   "year": "2026",
-  "soon": true
+  "scope": "Permit set and construction documents",
+  "gallery": [
+   {
+    "cap": "Reception rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Lounge and reception rendering",
+    "kind": "photo"
+   }
+  ],
+  "credits": [
+   {
+    "role": "Interior design",
+    "name": "Michele Pelafas"
+   },
+   {
+    "role": "Contractor",
+    "name": "NTX Construction Solutions"
+   },
+   {
+    "role": "MEP engineer",
+    "name": "Design-Aire Engineering"
+   }
+  ]
  }
 ]
