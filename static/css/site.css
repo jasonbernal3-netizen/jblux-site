@@ -203,8 +203,7 @@ a.card:hover .frame img{transform:scale(1.025)}
 .foot-info dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px}
 .foot-info dt{font-weight:500}
 .foot-info dd{margin:0}
-.foot-base{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-top:20px;margin-top:clamp(24px,4vw,56px)}
-.foot-base>*:nth-child(2){justify-self:center}
+.foot-base{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding-top:20px;margin-top:clamp(24px,4vw,56px)}
 .foot-base>*:last-child{justify-self:end}
 
 /* ── inner pages: heading block ── */
@@ -409,7 +408,7 @@ html:not(.js) .seq-d,.seq.static .seq-d{max-height:none;opacity:1;margin-top:6px
   .foot-art svg{width:72px}
   .foot-nav{grid-column:1/-1}
   .foot-base{grid-template-columns:1fr}
-  .foot-base>*:nth-child(2),.foot-base>*:last-child{justify-self:start}
+  .foot-base>*:last-child{justify-self:start}
   .controls .pill{height:40px;padding:0 14px}
   .pgrid{grid-template-columns:1fr}
   .filters{width:100%}

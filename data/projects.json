@@ -411,7 +411,8 @@
    },
    {
     "cap": "Kitchen",
-    "kind": "photo"
+    "kind": "photo",
+    "skip": true
    },
    {
     "cap": "Kitchen cabinetry",
@@ -445,7 +446,8 @@
     "slider": true,
     "drawing": true,
     "tb": "Existing",
-    "ta": "New"
+    "ta": "New",
+    "skip": true
    },
    {
     "t": "Rear exterior",
@@ -455,7 +457,8 @@
    {
     "t": "Side patio",
     "b": "ba-purdue-avenue-05-b",
-    "a": "ba-purdue-avenue-05-a"
+    "a": "ba-purdue-avenue-05-a",
+    "skip": true
    },
    {
     "t": "Mudroom",

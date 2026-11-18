@@ -121,7 +121,6 @@ function footer(u) {
     </div>
     <div class="foot-base label">
       <span>© ${new Date().getFullYear()} ${site.legal}</span>
-      <span>Permit sets · Renovations · Additions</span>
       <a href="#top">Back to top ↑</a>
     </div>
   </div>
@@ -192,8 +191,7 @@ ${chrome(u, '/')}
       </div>
       <span class="studio-tag label">Our studio</span>
       <div class="studio-copy">
-        <p>Jason Bernal founded JB Lux Designs in ${site.founded}, after working in architecture across healthcare, commercial and residential projects, including design coordination on multi-phase healthcare work.</p>
-        <p>Today the studio prepares permit sets, renovation and addition drawings, millwork and patio covers for homeowners and contractors, and carries each project through permit approval.</p>
+        <p>Jason Bernal founded JB Lux Designs in ${site.founded} after years of healthcare, commercial and residential work. The studio prepares permit sets, renovations, additions, millwork and patio covers for homeowners and contractors, and sees each project through permit approval.</p>
         <a class="pill pill-ink label" href="${u('/about/')}">About the studio ${arrow}</a>
       </div>
     </div>
@@ -216,7 +214,7 @@ ${chrome(u, '/')}
   </section>
 
   <section class="svc pad" id="services" aria-labelledby="svc-h">
-    <div class="svc-top"><span class="label" id="svc-h">Services</span><span class="label">Residential · Light commercial</span></div>
+    <div class="svc-top"><span class="label" id="svc-h">Services</span></div>
     <ul class="svc-list" id="svc-list">
       ${svc}
     </ul>
@@ -251,7 +249,7 @@ ${footer(u)}`;
 }
 
 function gallery(u, p) {
-  const items = p.gallery.map((g, i) => ({ ...g, name: `p-${p.slug}-${String(i + 1).padStart(2, '0')}` })).slice(1); // first image is the lead
+  const items = p.gallery.map((g, i) => ({ ...g, name: `p-${p.slug}-${String(i + 1).padStart(2, '0')}` })).slice(1).filter(it => !it.skip); // first image is the lead; skip hides an image without renumbering files
   const shape = it => { const m = images[it.name]; return m.w / m.h >= 1.15 ? 'L' : 'P'; };
   const out = []; let flip = false;
   for (let i = 0; i < items.length; i++) {
@@ -283,7 +281,7 @@ function seqHtml(u, s) {
 }
 function beforeAfter(u, p) {
   if (!p.ba) return '';
-  const rows = p.ba.map((r, i) => {
+  const rows = p.ba.filter(r => !r.skip).map((r, i) => {
     const base = `ba-${p.slug}-${String(i + 1).padStart(2, '0')}`;
     const a = r.a || base + '-a', b = r.b || base + '-b';
     if (r.slider) return `<div class="ba-pair ba-slide">
