@@ -413,6 +413,31 @@
   ]
  },
  {
+  "slug": "clayton-lane",
+  "name": "Clayton Lane",
+  "short": "Clayton Lane",
+  "type": "Patio cover addition",
+  "cat": "res",
+  "location": "Celina",
+  "year": "",
+  "gallery": [
+   {
+    "cap": "Patio cover from the backyard",
+    "kind": "photo"
+   },
+   {
+    "cap": "Under the patio cover",
+    "kind": "photo"
+   }
+  ],
+  "ba": [
+   {
+    "t": "Backyard",
+    "even": true
+   }
+  ]
+ },
+ {
   "slug": "purdue-avenue",
   "name": "Purdue Avenue",
   "short": "Purdue Avenue",
