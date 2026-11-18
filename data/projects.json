@@ -708,6 +708,43 @@
   ]
  },
  {
+  "slug": "nuli-studios-med-spa",
+  "name": "Nuli Studios Med Spa",
+  "short": "Nuli Studios",
+  "type": "Med spa",
+  "cat": "com",
+  "location": "Frisco and Southlake",
+  "year": "2026",
+  "scope": "Permit set and construction documents",
+  "gallery": [
+   {
+    "cap": "Reception rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Lounge and reception rendering",
+    "kind": "photo"
+   }
+  ],
+  "credits": [
+   {
+    "role": "Interior design",
+    "name": "Michele Pelafas"
+   },
+   {
+    "role": "Contractor",
+    "name": "NTX Construction Solutions"
+   },
+   {
+    "role": "MEP engineer",
+    "name": "Design-Aire Engineering"
+   }
+  ],
+  "summary": [
+   "Nuli Studios is a med spa brand with locations in Frisco and Southlake. For each suite of roughly 2,000 square feet, the studio prepared the permit set and construction documents that took interior designer Michele Pelafas's concept through permitting and into construction."
+  ]
+ },
+ {
   "slug": "knockouts-hair-salon",
   "name": "Knockouts Hair Salon",
   "short": "Knockouts",
@@ -840,43 +877,6 @@
     "role": "Contractor",
     "name": "NTX Construction Solutions"
    }
-  ]
- },
- {
-  "slug": "nuli-studios-med-spa",
-  "name": "Nuli Studios Med Spa",
-  "short": "Nuli Studios",
-  "type": "Med spa",
-  "cat": "com",
-  "location": "Frisco and Southlake",
-  "year": "2026",
-  "scope": "Permit set and construction documents",
-  "gallery": [
-   {
-    "cap": "Reception rendering",
-    "kind": "photo"
-   },
-   {
-    "cap": "Lounge and reception rendering",
-    "kind": "photo"
-   }
-  ],
-  "credits": [
-   {
-    "role": "Interior design",
-    "name": "Michele Pelafas"
-   },
-   {
-    "role": "Contractor",
-    "name": "NTX Construction Solutions"
-   },
-   {
-    "role": "MEP engineer",
-    "name": "Design-Aire Engineering"
-   }
-  ],
-  "summary": [
-   "Nuli Studios is a med spa brand with locations in Frisco and Southlake. For each suite of roughly 2,000 square feet, the studio prepared the permit set and construction documents that took interior designer Michele Pelafas's concept through permitting and into construction."
   ]
  }
 ]
