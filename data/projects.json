@@ -403,30 +403,42 @@
   "gallery": [
    {
     "cap": "Kitchen, toward the living room",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-purdue-avenue-01"
+   },
+   {
+    "cap": "Mudroom connector",
+    "kind": "photo",
+    "img": "h-purdue-mud"
    },
    {
     "cap": "Island and living room",
-    "kind": "photo"
+    "kind": "photo",
+    "skip": true,
+    "img": "p-purdue-avenue-02"
    },
    {
     "cap": "Kitchen",
     "kind": "photo",
-    "skip": true
+    "skip": true,
+    "img": "p-purdue-avenue-03"
    },
    {
     "cap": "Kitchen cabinetry",
-    "kind": "photo"
+    "kind": "photo",
+    "img": "p-purdue-avenue-04"
    },
    {
     "cap": "Cutaway axonometric",
     "kind": "drawing",
-    "full": true
+    "full": true,
+    "img": "p-purdue-avenue-05"
    },
    {
     "cap": "Structural diagram",
     "kind": "drawing",
-    "full": true
+    "full": true,
+    "img": "p-purdue-avenue-06"
    }
   ],
   "ba": [
@@ -437,7 +449,8 @@
     "slider": true,
     "tb": "Demolition",
     "ta": "New",
-    "drawing": true
+    "drawing": true,
+    "duo": true
    },
    {
     "t": "Rear axonometric",
@@ -447,12 +460,13 @@
     "drawing": true,
     "tb": "Existing",
     "ta": "New",
-    "skip": true
+    "duo": true
    },
    {
     "t": "Rear exterior",
     "b": "ba-purdue-avenue-01-b",
-    "a": "ba-purdue-avenue-01-a"
+    "a": "ba-purdue-avenue-01-a",
+    "even": true
    },
    {
     "t": "Side patio",
@@ -463,7 +477,8 @@
    {
     "t": "Mudroom",
     "b": "ba-purdue-avenue-02-b",
-    "a": "ba-purdue-avenue-02-a"
+    "a": "ba-purdue-avenue-02-a",
+    "skip": true
    }
   ],
   "scope": "Design, construction documents and millwork drawings",

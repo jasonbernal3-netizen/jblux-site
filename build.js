@@ -249,7 +249,7 @@ ${footer(u)}`;
 }
 
 function gallery(u, p) {
-  const items = p.gallery.map((g, i) => ({ ...g, name: `p-${p.slug}-${String(i + 1).padStart(2, '0')}` })).slice(1).filter(it => !it.skip); // first image is the lead; skip hides an image without renumbering files
+  const items = p.gallery.map((g, i) => ({ ...g, name: g.img || `p-${p.slug}-${String(i + 1).padStart(2, '0')}` })).slice(1).filter(it => !it.skip); // first image is the lead; skip hides an image without renumbering files
   const shape = it => { const m = images[it.name]; return m.w / m.h >= 1.15 ? 'L' : 'P'; };
   const out = []; let flip = false;
   for (let i = 0; i < items.length; i++) {
@@ -279,31 +279,42 @@ function seqHtml(u, s) {
     </div>
   </section>`;
 }
-function beforeAfter(u, p) {
-  if (!p.ba) return '';
-  const rows = p.ba.filter(r => !r.skip).map((r, i) => {
-    const base = `ba-${p.slug}-${String(i + 1).padStart(2, '0')}`;
-    const a = r.a || base + '-a', b = r.b || base + '-b';
-    if (r.slider) return `<div class="ba-pair ba-slide">
-      <span class="label">${esc(r.t)}<br><span class="ba-hint">Drag to compare</span></span>
-      <div class="cmp${r.drawing ? ' ink' : ''}" style="--p:50%;--ar:${(images[a].w / images[a].h).toFixed(4)}">
-        ${pic(u, a, '(max-width:900px) 100vw, 66vw', `${p.name}, ${r.t.toLowerCase()}: after`)}
-        <div class="cmp-b" aria-hidden="true">${pic(u, b, '(max-width:900px) 100vw, 66vw', `${p.name}, ${r.t.toLowerCase()}: before`)}</div>
+function cmpHtml(u, p, r, a, b, sizes) {
+  return `<div class="cmp${r.drawing ? ' ink' : ''}" style="--p:50%;--ar:${(images[a].w / images[a].h).toFixed(4)}">
+        ${pic(u, a, sizes, `${p.name}, ${r.t.toLowerCase()}: after`)}
+        <div class="cmp-b" aria-hidden="true">${pic(u, b, sizes, `${p.name}, ${r.t.toLowerCase()}: before`)}</div>
         <span class="cmp-line" aria-hidden="true"><span class="cmp-knob"></span></span>
         <span class="cmp-tag cmp-tb label">${esc(r.tb || 'Before')}</span><span class="cmp-tag cmp-ta label">${esc(r.ta || 'After')}</span>
         <input class="cmp-r" type="range" min="0" max="100" step="0.1" value="50" aria-label="${esc(r.t)}: slide between before and after">
-      </div>
-    </div>`;
-    return `<div class="ba-pair">
+      </div>`;
+}
+function beforeAfter(u, p) {
+  if (!p.ba) return '';
+  // default file names follow each row's position in the data, so hidden (skip) rows never shift them
+  const list = p.ba.map((r, i) => { const base = `ba-${p.slug}-${String(i + 1).padStart(2, '0')}`; return { r, a: r.a || base + '-a', b: r.b || base + '-b' }; }).filter(x => !x.r.skip);
+  const out = [];
+  for (let i = 0; i < list.length; i++) {
+    const { r, a, b } = list[i], nx = list[i + 1];
+    if (r.slider && r.duo && nx && nx.r.slider && nx.r.duo) {   // two drawing sliders side by side on desktop
+      out.push(`<div class="ba-pair ba-duo">
+      <span class="label">${esc(r.t)} and ${esc(nx.r.t.toLowerCase())}<br><span class="ba-hint">Drag to compare</span></span>
+      <div class="duo">${[list[i], nx].map(x => `<figure class="duo-f">${cmpHtml(u, p, x.r, x.a, x.b, '(max-width:900px) 100vw, 45vw')}<figcaption class="label">${esc(x.r.t)}</figcaption></figure>`).join('')}</div>
+    </div>`); i++; continue;
+    }
+    if (r.slider) { out.push(`<div class="ba-pair ba-slide">
+      <span class="label">${esc(r.t)}<br><span class="ba-hint">Drag to compare</span></span>
+      ${cmpHtml(u, p, r, a, b, '(max-width:900px) 100vw, 66vw')}
+    </div>`); continue; }
+    out.push(`<div class="ba-pair${r.even ? ' ba-even' : ''}">
       <span class="label">${esc(r.t)}</span>
       <figure>${pic(u, b, '(max-width:900px) 50vw, 33vw', `${p.name}, ${r.t.toLowerCase()}: before`)}<figcaption class="label">${r.lb || 'Before'}</figcaption></figure>
       <figure>${pic(u, a, '(max-width:900px) 50vw, 42vw', `${p.name}, ${r.t.toLowerCase()}: ${(r.la || 'After').toLowerCase()}`)}<figcaption class="label">${r.la || 'After'}</figcaption></figure>
-    </div>`;
-  }).join('\n    ');
+    </div>`);
+  }
   return `
   <section class="ba pad" aria-labelledby="ba-h">
     <div class="ba-head ruled"><h2 id="ba-h">${p.ba.some(r => r.la) ? 'Existing and proposed' : 'Before and after'}</h2></div>
-    ${rows}
+    ${out.join('\n    ')}
   </section>`;
 }
 function projectPage(u, p) {
