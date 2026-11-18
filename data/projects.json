@@ -596,8 +596,29 @@
    {
     "cap": "Exterior rendering",
     "kind": "photo"
+   },
+   {
+    "cap": "Stair hall rendering",
+    "kind": "photo"
+   },
+   {
+    "cap": "Axonometric of the addition",
+    "kind": "drawing"
+   },
+   {
+    "cap": "Existing side yard",
+    "kind": "photo"
    }
-  ]
+  ],
+  "ba": [
+   {
+    "t": "Street view",
+    "even": true,
+    "lb": "Existing",
+    "la": "Under construction"
+   }
+  ],
+  "baTitle": "Existing and under construction"
  },
  {
   "slug": "mias-hair-salon",

@@ -313,7 +313,7 @@ function beforeAfter(u, p) {
   }
   return `
   <section class="ba pad" aria-labelledby="ba-h">
-    <div class="ba-head ruled"><h2 id="ba-h">${p.ba.some(r => r.la) ? 'Existing and proposed' : 'Before and after'}</h2></div>
+    <div class="ba-head ruled"><h2 id="ba-h">${p.baTitle || (p.ba.some(r => r.la) ? 'Existing and proposed' : 'Before and after')}</h2></div>
     ${out.join('\n    ')}
   </section>`;
 }
