@@ -267,6 +267,8 @@ function gallery(u, p) {
     </figure>`;
   }).join('\n    ');
 }
+// partner logos shown in place of the name in project credits (keyed by the credit name)
+const LOGOS = { 'NTX Construction Solutions': { f: 'logo-ntx.webp', w: images['logo-ntx'].w, h: images['logo-ntx'].h } };
 function seqHtml(u, s) {
   return `<section class="seq" id="seq" style="--steps:${s.steps.length}" data-base="${u('/img/' + s.dir + '/000.webp').replace(/000\.webp(\?.*)?$/, '')}" data-frames="${s.frames}" data-steps="${s.steps.map(x => x.at).join(',')}" aria-label="${esc(s.title)}">
     <div class="seq-pin pad">
@@ -340,7 +342,7 @@ ${topbar(u, '/projects/')}
   </figure>
   ${p.summary || p.credits ? `<section class="proj-body pad grid">
     <span class="label">${p.summary ? 'About the project' : 'Credits'}</span>
-    ${p.summary ? `<div class="proj-text">${[].concat(p.summary).map(t => `<p>${esc(t)}</p>`).join('')}</div>` : ''}${p.credits ? `<dl class="credits label">${p.credits.map(c => `<div><dt>${esc(c.role)}</dt><dd>${esc(c.name)}</dd></div>`).join('')}</dl>` : ''}
+    ${p.summary ? `<div class="proj-text">${[].concat(p.summary).map(t => `<p>${esc(t)}</p>`).join('')}</div>` : ''}${p.credits ? `<dl class="credits label">${p.credits.map(c => { const lg = LOGOS[c.name]; return `<div><dt>${esc(c.role)}</dt><dd>${lg ? `<img class="credit-logo" src="${u('/img/' + lg.f)}" alt="${esc(c.name)}" width="${lg.w}" height="${lg.h}" loading="lazy">` : esc(c.name)}</dd></div>`; }).join('')}</dl>` : ''}
   </section>` : '<div class="proj-gap"></div>'}
   ${p.sequence && !p.sequence.end ? seqHtml(u, p.sequence) : ''}
   ${p.gallery.length > 1 ? `<section class="gallery pad" aria-label="Gallery">
