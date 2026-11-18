@@ -453,6 +453,20 @@
     "role": "Contractor",
     "name": "NTX Construction Solutions"
    }
+  ],
+  "build": [
+   {
+    "img": "b-cloud-view-court-01",
+    "t": "Kitchen with the hood duct roughed in"
+   },
+   {
+    "img": "b-cloud-view-court-02",
+    "t": "Range alcove, drywall finished"
+   },
+   {
+    "img": "b-cloud-view-court-03",
+    "t": "Fireplace niches ready for built-ins"
+   }
   ]
  },
  {

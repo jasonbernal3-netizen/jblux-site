@@ -351,7 +351,7 @@ ${topbar(u, '/projects/')}
 ${p.build ? `
   <section class="details build pad" aria-labelledby="build-h">
     <div class="ba-head ruled"><h2 id="build-h">During construction</h2></div>
-    <div class="build-grid">${p.build.map((x, i) => { const n = x.img, m = images[n]; return `<figure class="g det reveal"><button class="zoom" type="button" data-full="${u('/img/' + n + '-' + Math.max(...m.sizes) + '.webp')}" data-cap="${esc(x.t)}" aria-label="Enlarge: ${esc(x.t)}">${pic(u, n, '(max-width:720px) 50vw, 25vw', p.name + ' under construction: ' + x.t.toLowerCase())}</button><figcaption class="label"><span>${esc(x.t)}</span><span class="num">C${i + 1}</span></figcaption></figure>`; }).join('')}</div>
+    <div class="build-grid" style="--n:${Math.max(p.build.length, 3)}">${p.build.map((x, i) => { const n = x.img, m = images[n]; return `<figure class="g det reveal"><button class="zoom" type="button" data-full="${u('/img/' + n + '-' + Math.max(...m.sizes) + '.webp')}" data-cap="${esc(x.t)}" aria-label="Enlarge: ${esc(x.t)}">${pic(u, n, '(max-width:720px) 50vw, 25vw', p.name + ' under construction: ' + x.t.toLowerCase())}</button><figcaption class="label"><span>${esc(x.t)}</span><span class="num">C${i + 1}</span></figcaption></figure>`; }).join('')}</div>
   </section>` : ''}
 ${p.details ? `
   <section class="details pad" aria-labelledby="det-h">
